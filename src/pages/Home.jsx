@@ -1,4 +1,5 @@
-import { ThemeToggle } from "../components/ThemeToggle"
+import { ThemeToggle } from "../components/ThemeToggle";
+import { StarBackground } from "../components/StarBackground";
 import { useState } from 'react'; 
 
 export const Home = () => {
@@ -7,7 +8,7 @@ export const Home = () => {
         {/* Theme Toggle */}
         <ThemeToggle />
         {/* Background Effects */}
-
+        <StarBackground />
         {/* Navbar */}
 
         {/* Main Content */}
