@@ -1,37 +1,55 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
+  const [meteors, setMeteors] = useState([]);
 
-  useEffect(() => {
-    generateStars(); // 처음 렌더링될 때 한 번 실행
-  }, []);
-
+  // 별 생성
   const generateStars = () => {
-    const total = Math.floor((window.innerWidth * window.innerHeight) / 10000);
-
+    const numberOfStars = Math.floor(
+      (window.innerWidth * window.innerHeight) / 10000
+    );
     const newStars = [];
-    for (let i = 0; i < total; i++) {
+    for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
         id: i,
         size: Math.random() * 3 + 1,
-        // px 단위로 쓰고 있으므로 화면 크기 기준으로 뽑도록 수정
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         opacity: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2, 
+        animationDuration: Math.random() * 4 + 2,
       });
     }
     setStars(newStars);
   };
 
+  // 유성 생성
+  const generateMeteors = () => {
+    const numberOfMeteors = 4;
+    const newMeteors = [];
+    for (let i = 0; i < numberOfMeteors; i++) {
+      newMeteors.push({
+        id: i,
+        size: Math.random() * 2 + 1,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * (window.innerHeight * 0.2),
+        delay: Math.random() * 1.5,           // s
+        animationDuration: Math.random() * 3 + 3, // s
+      });
+    }
+    setMeteors(newMeteors);
+  };
+
+  useEffect(() => {
+    generateStars();
+    generateMeteors();
+  }, []);
+
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {stars.map((star) => (
         <div
-          key={star.id}
+          key={`star-${star.id}`}
           className="star animate-pulse-subtle"
           style={{
             width: star.size + "px",
@@ -40,7 +58,23 @@ export const StarBackground = () => {
             top: star.y + "px",
             opacity: star.opacity,
             animationDuration: star.animationDuration + "s",
-            //position: "absolute", // 위치 지정 (필요 최소)
+            position: "absolute",
+          }}
+        />
+      ))}
+
+      {meteors.map((meteor) => (
+        <div
+          key={meteor.id}
+          className="meteor animate-pulse-subtle"
+          style={{
+            width: meteor.size + "px",
+            height: meteor.size + "px",
+            left: meteor.x + "px",
+            top: meteor.y + "px",
+            animationDelay: meteor.delay + "s",
+            animationDuration: meteor.animationDuration + "s",
+            position: "absolute",
           }}
         />
       ))}
