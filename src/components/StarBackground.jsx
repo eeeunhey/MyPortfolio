@@ -4,6 +4,21 @@ export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
 
+
+  useEffect(() => {
+    generateStars();
+    generateMeteors();
+
+    const handleResize = () => {
+      generateStars();
+    };
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
+
   // 별 생성
   const generateStars = () => {
     const numberOfStars = Math.floor(
@@ -40,10 +55,7 @@ export const StarBackground = () => {
     setMeteors(newMeteors);
   };
 
-  useEffect(() => {
-    generateStars();
-    generateMeteors();
-  }, []);
+
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
@@ -66,13 +78,13 @@ export const StarBackground = () => {
       {meteors.map((meteor) => (
         <div
           key={meteor.id}
-          className="meteor animate-pulse-subtle"
+          className="meteor animate-meteor"
           style={{
-            width: meteor.size + "px",
-            height: meteor.size + "px",
-            left: meteor.x + "px",
-            top: meteor.y + "px",
-            animationDelay: meteor.delay + "s",
+            width: meteor.size * 50 + "px",
+            height: meteor.size * 2 + "px",
+            left: meteor.x + "%",
+            top: meteor.y + "%",
+            animationDelay: meteor.delay,
             animationDuration: meteor.animationDuration + "s",
             position: "absolute",
           }}
