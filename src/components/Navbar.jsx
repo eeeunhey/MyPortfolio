@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const navItem = [
+const navItems = [
     {name: "Home", href: "#hero"},
     {name: "About", href: "#about"},
     {name: "Skills", href: "#skills"},
@@ -21,6 +21,34 @@ export const Navbar = () => {
 
     }, [])
 
-    return <nav className={cn("fixed w-full z-40 transition-all duration-300", )}></nav>; 
+    return <nav className={cn("fixed w-full z-40 transition-all duration-300", 
+        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+    )}>
+
+        <div className="container flex items-center justity-between">
+            <a 
+                className="text-xl font-bold text-primary flex items-center"
+                href="#hero"
+            >
+                <span className="realtive z-10">
+                    <span className="text-glow text-foreground"> EUNHEY </span>{" "} 
+                    Portfolio
+                </span>
+            </a>
+
+            {/* desktop nav */}
+            <div>
+                {navItems.map((item, key) => {
+
+
+                })}
+            </div>
+
+            {/* mobile nav */}
+
+        </div>
+
+
+    </nav>; 
 
 };
