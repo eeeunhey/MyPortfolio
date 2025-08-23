@@ -40,7 +40,7 @@ export const StarBackground = () => {
 
   // 유성 생성
   const generateMeteors = () => {
-    const numberOfMeteors = 4;
+    const numberOfMeteors = 5;
     const newMeteors = [];
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
@@ -81,9 +81,9 @@ export const StarBackground = () => {
           className="meteor animate-meteor"
           style={{
             width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
+            height: meteor.size * 0.5 + "px",
+            left: meteor.x + "px",
+            top: meteor.y + "px",
             animationDelay: meteor.delay,
             animationDuration: meteor.animationDuration + "s",
             position: "absolute",
