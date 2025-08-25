@@ -1,0 +1,20 @@
+services:
+  web:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      - "5173:5173"        # Vite 기본 포트
+    volumes:
+      - .:/app:delegated   # 로컬 코드 -> 컨테이너 반영
+      - /app/node_modules  # node_modules는 컨테이너 내부 전용(충돌 방지)
+    environment:
+      # 파일변경 감지 안정화(특히 Windows/WSL/네트워크 드라이브)
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_FORCE_POLLING=true
+      - NODE_ENV=development
+    command: >
+      sh -lc "
+        corepack enable &&
+        if [ -f package-lock.json ]; then npm ci; else npm install; fi &&
+        npm run dev -- --host 0.0.0.0 --port 5173
+      "
