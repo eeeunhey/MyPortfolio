@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 // cn: Tailwind 클래스 합치기 유틸 함수
 // - 여러 클래스를 한 줄로 합쳐줌
 // - true/false 조건에 따라 클래스 넣거나 뺄 수 있음
@@ -7,6 +8,7 @@ import { useEffect, useState } from "react";
 //   예: "p-2 p-4" → 실제로는 "p-4"만 적용됨
 //   보통 clsx + tailwind-merge 조합으로 구현함
 import { cn } from "@/lib/utils"; // cn 유틸 꼭 추가
+import { Menu, X } from "lucide-react";
 
 
 // 내비게이션 메뉴 목록 정의
@@ -24,7 +26,7 @@ export const Navbar = () => {
   // 스크롤 여부 상태 (스크롤했는지 아닌지 true/false)
   const [isScrolled, setIsScrolled] = useState(false);
   // 모바일 메뉴 열림/닫힘 상태
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // 스크롤할 때 실행되는 함수
@@ -75,6 +77,22 @@ export const Navbar = () => {
         </div>
 
         {/* 모바일 화면에서 보이는 메뉴 */}
+        {/*  버튼 클릭 시 메뉴 열림/닫힘 상태를 토글한다.
+              prev는 이전 상태값(isMenuOpen)이다 
+              !prev로 true/false를 반전한다. */}
+        {/*  Tailwind 클래스:
+             md:hidden      → 화면이 md(중간) 이상일 때는 이 버튼을 숨김(모바일 전용 버튼)
+             p-2            → 패딩 0.5rem
+             text-forground → 글자색
+             z-50           → 다른 요소 위에 떠 있도록 z-index를 크게 설정 */}
+        <button 
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        className="md:hidden p-2 text-foreground z-50"
+        >
+        {/* isMenuOpen이 true면 'X' 아이콘(닫기), false면 'Menu' 아이콘(열기)을 보여준다.*/}
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+        
+        </button>
 
       <div className = {cn(
         "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
