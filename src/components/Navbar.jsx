@@ -88,6 +88,7 @@ export const Navbar = () => {
         <button 
         onClick={() => setIsMenuOpen((prev) => !prev)}
         className="md:hidden p-2 text-foreground z-50"
+        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
         {/* isMenuOpen이 true면 'X' 아이콘(닫기), false면 'Menu' 아이콘(열기)을 보여준다.*/}
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
