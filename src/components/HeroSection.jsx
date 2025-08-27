@@ -84,7 +84,7 @@ export const HeroSection = () => {
            //items-center           가로축(교차축) 가운데 정렬 
            //animate-bounce         상하로 통통 튀는 애니메이션 
       > 
-        <span> Scroll </span>
+        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
