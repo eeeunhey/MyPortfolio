@@ -4,6 +4,7 @@ WORKDIR /app
 
 # 패키지 파일 복사 및 의존성 설치
 COPY package*.json ./
+RUN npm install
 RUN corepack enable
 
 # npm 캐시 정리 및 의존성 설치
@@ -12,6 +13,9 @@ RUN npm cache clean --force && \
 
 # 소스 코드 복사
 COPY . .
+
+# 포트 열기
+EXPOSE 5173
 
 # lucide-react 문제 해결을 위한 추가 설정
 RUN npm rebuild lucide-react || true
@@ -31,5 +35,6 @@ COPY nginx.vh.conf /etc/nginx/conf.d/default.conf
 # 포트 노출
 EXPOSE 80
 
-# Nginx 실행
-CMD ["nginx", "-g", "daemon off;"]
+
+# 실행 명령어
+CMD ["npm", "run", "dev"]

@@ -3,30 +3,35 @@ services:
     image: node:20-alpine
     working_dir: /app
     ports:
-      - "5173:5173"        # Vite 기본 포트
+      - "5173:5173"              # Vite 기본 포트
     volumes:
-      - .:/app:delegated   # 로컬 코드 -> 컨테이너 반영
-      - /app/node_modules  # node_modules는 컨테이너 내부 전용(충돌 방지)
+      - .:/app:delegated         # 로컬 코드 → 컨테이너
+      - /app/node_modules        # node_modules는 컨테이너 전용 (충돌 방지)
+      - npm-cache:/root/.npm     # npm 캐시를 볼륨으로 (재설치 속도 ↑)
     environment:
-      # 파일변경 감지 안정화
+      # 파일 변경 감지(Windows/WSL/도커 Desktop에서 중요)
       - CHOKIDAR_USEPOLLING=true
-      - VITE_FORCE_POLLING=true
+      - WATCHPACK_POLLING=true
+      # 앱 코드에서 import.meta.env.VITE_* 로 접근할 값이 있으면 여기에 추가
+      # - VITE_API_BASE=http://localhost:8000
       - NODE_ENV=development
-      # 빌드 최적화 설정
-      - VITE_OPTIMIZE_DEPS_INCLUDE=lucide-react
     command: >
-      sh -lc "
-        corepack enable &&
-        echo '의존성 설치 시작...' &&
-        if [ -f package-lock.json ]; then 
-          npm cache clean --force &&
-          npm ci --no-optional --prefer-offline; 
-        else 
-          npm cache clean --force &&
-          npm install --no-optional --prefer-offline; 
+      sh -lc '
+        corepack enable || true &&
+        echo "🔧 Installing deps..." &&
+        if [ -f package-lock.json ]; then
+          npm ci --no-optional --prefer-offline;
+        else
+          npm install --no-optional --prefer-offline;
         fi &&
-        echo 'lucide-react 재빌드 시도...' &&
-        npm rebuild lucide-react || echo 'lucide-react 재빌드 실패 (무시)' &&
-        echo '개발 서버 시작...' &&
-        npm run dev -- --host 0.0.0.0 --port 5173 --force
-      "
+        echo "🚀 Starting dev server..." &&
+        npm run dev -- --host 0.0.0.0 --port 5173 --strictPort
+      '
+    # 컨테이너 종료 시 로그만 남기고 꺼지는 문제 방지/정리
+    init: true
+    restart: unless-stopped
+
+volumes:
+  npm-cache:
+
+
