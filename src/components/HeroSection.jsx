@@ -26,14 +26,15 @@ export const HeroSection = () => {
         {/* 수직 간격 부여: 자식 요소들 사이에 1.5rem 간격(space-y-6) */}
         <div className="space-y-6">
           {/* 메인 제목: 히어로 메시지(스크린리더가 먼저 읽음) */}
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight"
+          <h1 className="text-3xl md:text-4xl font-bold tracking-normer leading-normal"
               // text-3xl      : 기본(모바일)에서 큰 글씨
               // md:text-4xl   : 화면이 md(≥768px) 이상일 때 더 크게
               // font-bold     : 굵은 글꼴
               // tracking-tight: 자간을 약간 좁게
           >
             {/* 1) 첫 줄: 처음엔 투명 → 페이드인으로 나타남 */}
-            <span className="opacity-0 animate-fade-in"> 안녕하세요! </span>
+            <span className="opacity-0 animate-fade-in">
+               안녕하세요! </span>
 
             {/* 2) 두 번째 줄(포인트 색상): 약간 지연 후 페이드인 */}
             <span className="text-primary opacity-0 animate-fade-in delay-1"> 
@@ -55,9 +56,9 @@ export const HeroSection = () => {
                           //opacity-0                     처음엔 투명(애니메이션 준비)
                           //animate-fade-in-delay-3       3단계 지연 후 서서히 나타나기
           >           
-            I craft high-quality web experiences with modern tech. 
-            As a front-end specialist, 
-            I build interfaces that are both beautiful and intuitive.
+            사람들에게 도움이 되는 서비스를 만들고 싶은 개발자입니다.<br/>
+            코드를 통해 더 나은 세상을 만드는 것이 제 꿈입니다.<br/>
+            사용자 경험을 먼저 생각하는 개발자로 성장하고 싶습니다.
           </p>
 
           <div className = "pt-4  opacity-0 animate-fade-in-delay-4"
