@@ -1,4 +1,4 @@
-![Animation](https://github.com/user-attachments/assets/f790e5a8-32c9-492c-ab53-c8ef3d9a1f54)# 🌌 Portfolio Website
+ 🌌 Portfolio Website
 
 나만의 포트폴리오를 소개하는 웹사이트입니다.  
 React + Vite + TailwindCSS를 기반으로 제작했으며,  
