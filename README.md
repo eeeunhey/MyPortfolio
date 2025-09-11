@@ -1,4 +1,4 @@
-# 🌌 Portfolio Website
+![Animation](https://github.com/user-attachments/assets/f790e5a8-32c9-492c-ab53-c8ef3d9a1f54)# 🌌 Portfolio Website
 
 나만의 포트폴리오를 소개하는 웹사이트입니다.  
 React + Vite + TailwindCSS를 기반으로 제작했으며,  
@@ -24,8 +24,11 @@ React + Vite + TailwindCSS를 기반으로 제작했으며,
 ---
 
 📸 Screenshots
+✨ 다크/라이트 모드 지원
+포트폴리오는 단순히 정보 전달을 넘어,
+어두운 화면에서도, 밝은 화면에서도 편안한 경험을 제공하도록 구현했습니다.
+![Animation](https://github.com/user-attachments/assets/ef0285c5-1683-451c-8cb2-d3c841960b38)
 
-(사이트 화면 스크린샷 첨부)
 
 🔗 Demo
 
