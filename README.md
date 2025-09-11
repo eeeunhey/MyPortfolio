@@ -19,9 +19,6 @@ React + Vite + TailwindCSS 기반으로 제작했으며,
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, Vite, TailwindCSS  
-- **Backend:** Node.js 🟩, Spring 🌱, MongoDB 🍃, OracleDB 🔴  
-- **Animation:** CSS Keyframes, Framer Motion  
-- **Deployment:** Vercel / Netlify  
 - **Version Control:** Git, GitHub  
 
 ---
