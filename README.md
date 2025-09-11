@@ -29,6 +29,7 @@ React + Vite + TailwindCSS 기반으로 제작했으며,
 ## 📸 Screenshots
 ✨ 단순한 정보 전달을 넘어,  
 어두운 화면과 밝은 화면 모두에서 **가독성과 디자인의 조화**를 유지하도록 구현했습니다.
+
 ![Animation](https://github.com/user-attachments/assets/9c0eefe2-5112-4ae6-b6a6-73949f424bf3)
 
 
