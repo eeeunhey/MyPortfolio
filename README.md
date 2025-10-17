@@ -1,5 +1,11 @@
 🌌 Portfolio Website
 
+<p align="center">
+  <a href="https://eunhyeportfolisite.vercel.app" target="_blank">
+    🚀 <b>포트폴리오 사이트 바로가기</b>
+  </a>
+</p>
+
 React + Vite + TailwindCSS 기반으로 제작한 포트폴리오 웹사이트입니다.  
 단순히 보여주는 데 그치지 않고, 사용자 환경을 고려해 **라이트·다크 모드 전환 기능**을 추가했습니다.
 
@@ -34,6 +40,11 @@ React의 상태(state)를 이용해 버튼을 누르면 라이트 ↔ 다크 모
 
 ---
 
-## 🔗 Demo
-👉 [포트폴리오 사이트 바로가기]
-추후 기재
+## 🔗 Demo  
+👉 [포트폴리오 사이트 바로가기](https://eunhyeportfolisite.vercel.app)
+
+📅 **배포 일자:** 2025.10.xx  
+📦 **배포 환경:** Vercel (Vite + React 기반)  
+🎨 **주요 기능:**  
+- 자기소개 및 프로젝트 카드 뷰  
+- 반응형 포트폴리오 UI  
