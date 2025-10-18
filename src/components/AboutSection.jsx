@@ -47,12 +47,12 @@ export const AboutSection = () => {
             </div>
             <p className="text-muted-foreground">
               안녕하세요. 새로운 기술을 탐구하고, 스스로 더 나은 결과를
-              만들어가는 걸 좋아하는 <b>김은혜입니다.</b> 
+              만들어가는 걸 좋아하는 <b>김은혜입니다.</b>
               <br />
               코드를 통해 아이디어를 현실로 구현하며, 기술이 사람들에게 어떤
               가치를 줄 수 있을지 끊임없이 고민합니다.
             </p>
-{/* 
+            {/* 
             <p className="text-muted-foreground">
               단순히 주어진 기능을 만드는 데 그치지 않고, 배운 기술을 결합해
               나만의 방식으로 풀어내는 걸 즐깁니다.
@@ -73,7 +73,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/김은혜 이력서.pdf"
+                download
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 이력서 다운로드
