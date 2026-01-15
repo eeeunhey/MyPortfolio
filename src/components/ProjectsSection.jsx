@@ -28,17 +28,23 @@ const projects = [
     githubUrl: "https://github.com/eeeunhey/balanceeat",
   },
 
-  {
-    id: 2,
-    title: "Spotify Clone — TypeScript",
-    period: "2025.10–2025.11 (개인)",
-    description:
-      "OAuth(PKCE) + Web API 연동, 재생 큐/플레이리스트/검색. 전역 타입 정의로 안전한 데이터 흐름 구현.",
-    image: "/images/preparationpage.png",
-    tags: ["TypeScript", "React", "Zustand", "MUI", "Spotify API"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/eeeunhey/spotify-ts-clone",
-  },
+{
+  id: 2,
+  title: "ResumeBuilder — 이력서 작성 지원 웹",
+  period: "2025.10–2025.11 (개인)",
+  description:
+    "사용자 입력 기반 이력서 작성 및 항목 구조화 지원. 섹션별 입력 가이드와 실시간 미리보기로 작성 효율을 개선.",
+  image: "/images/resumeBuild.png",
+  tags: [
+    "TypeScript",
+    "React",
+    "State Management",
+    "Form Handling",
+    "UX",
+  ],
+  demoUrl: "#",
+  githubUrl: "https://github.com/eeeunhey/ResumeBuilder",
+},
 
   {
     id: 1,
@@ -63,10 +69,10 @@ const projects = [
   {
     id: 3,
     title: "Interview Simulator — 팀 프로젝트",
-    period: "2025.08–진행중 (팀)",
+    period: "2025.09 – 2025.11 (팀)",
     description:
       "질문 생성·STT·감정/집중도 시각화·세션 리포트. Recharts/동기화 타임라인·WebRTC·백그라운드 업로드.",
-    image: "/images/preparationpage.png",
+    image: "/images/Mockinterview.png",
     tags: [
       "React",
       "TypeScript",

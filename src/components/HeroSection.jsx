@@ -14,9 +14,6 @@ export const HeroSection = () => {
       // justify-center     : 세로(주 축) 가운데 정렬
       // px-4               : 좌우 패딩 (1rem)으로 양 옆 여백 확보
     >
-
-
-      
       {/* 컨텐츠를 가운데로 모으고, 최대 폭을 제한하여 가독성 확보 */}
       <div
         className="container max-w-4xl mx-auto text-center z-10"
@@ -26,12 +23,8 @@ export const HeroSection = () => {
         // text-center : 안쪽 텍스트/인라인 요소를 가운데 정렬
         // z-10        : z-index:10. (겹치는 요소 위로 올림; 보통 position이 있어야 효과적)
       >
-
-        
         {/* 수직 간격 부여: 자식 요소들 사이에 1.5rem 간격(space-y-6) */}
         <div className="space-y-6 ">
-          
-          
           {/* 메인 제목: 히어로 메시지(스크린리더가 먼저 읽음) */}
           <h1
             className="text-3xl md:text-4xl font-bold tracking-normal leading-normal"
@@ -39,9 +32,8 @@ export const HeroSection = () => {
             // md:text-4xl   : 화면이 md(≥768px) 이상일 때 더 크게
             // font-bold     : 굵은 글꼴
             // tracking-tight: 자간을 약간 좁게
-          >  
-
-                        {/* 1) 첫 줄: 처음엔 투명 → 페이드인으로 나타남 */}
+          >
+            {/* 1) 첫 줄: 처음엔 투명 → 페이드인으로 나타남 */}
             <span className="opacity-0 animate-fade-in">안녕하세요! </span>
 
             {/* 2) 두 번째 줄(포인트 색상): 약간 지연 후 페이드인 */}
@@ -58,24 +50,15 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p
-            className="text-[15px] md:text-[17px] leading-relaxed text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3"
-            //text-lg md:text-xl            기본 L, md 이상 XL로 글자 크기 업
-            //text-muted-foreground         본문보다 한 톤 낮춘 보조 텍스트 색
-            //max-w-2xl mx-auto             중앙 정렬
-            //opacity-0                     처음엔 투명(애니메이션 준비)
-            //animate-fade-in-delay-3       3단계 지연 후 서서히 나타나기
-          >
-            새로운 기술을 탐구하고, 서로 다른 기술 사이의 연결점을 찾는 걸
-            좋아합니다.
+          <p className="text-[15px] md:text-[17px] leading-relaxed text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            새로운 기술을 직접 경험하며 이해하는 과정을 중요하게 생각합니다.
             <br />
-            그 과정에서 배우고 성장하며, 더 넓은 시야를 가진 개발자로 나아가고
-            있습니다.
+            배운 내용을 실제 결과로 증명하고, 그 과정에서 한 단계씩 성장해
+            왔습니다.
             <br />
-            끊임없이 배우고 탐구하며, 스스로 성장의 방향을 만들어가는 개발자가
-            되고 싶습니다.
+            끊임없는 경험과 검증을 통해 스스로 성장의 방향을 만들어가는
+            개발자입니다.
           </p>
-
 
           <div
             className="pt-4  opacity-0 animate-fade-in-delay-4"
