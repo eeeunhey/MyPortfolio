@@ -1,30 +1,33 @@
-// 프로젝트를 추가할 때
-// public/projects/porject01(이미지를 추가)
+// public/images 에 이미지 추가 후
+// 프로젝트를 추가할 때 projects 배열에 객체를 추가하면 됩니다.
 
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    id: 1,
-    title: "Ascend — 이력서 코칭 웹",
-    period: "2025.10–진행중 (개인)",
+    id: 7,
+    title: "Daily Emotion Log — 감정 기록",
+    period: "2025.12 (팀)",
     description:
-      "이력서 업로드 → 항목별 피드백/점수/문구 개선 제안. ATS 관점의 키워드 맵과 수정 가이드 제공.",
-    image: "/images/ascend.png",
-    tags: [
-      "TypeScript",
-      "React",
-      "Vite",
-      "Tailwind",
-      "Puter.js",
-      "Zustand",
-      "React Query",
-    ],
-    demoUrl: "#", // 배포 링크 있으면 교체
-    githubUrl: "https://github.com/eeeunhey/Ascend", // 레포 경로에 맞춰 수정
+      "하루 감정을 기록하고 시각화하는 감정 로그 서비스. 감정 패턴을 돌아보고 인사이트를 얻는 흐름 제공.",
+    image: "/images/EmotionLog.png",
+    tags: ["React", "TypeScript", "State", "Chart", "Team"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/eeeunhey/daily-emotion-log",
   },
 
-  // 🔹 새로 추가 — Spotify 클론 (TS)
+  {
+    id: 6,
+    title: "BalanceEat — AI 식단 관리",
+    period: "2025.10–2025.11 (팀)",
+    description:
+      "사용자 데이터 기반 식단 추천/기록 관리. 섭취 정보 시각화 및 피드백 제공.",
+    image: "/images/BalanceEat.png",
+    tags: ["React", "TypeScript", "AI", "Visualization", "Team"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/eeeunhey/balanceeat",
+  },
+
   {
     id: 2,
     title: "Spotify Clone — TypeScript",
@@ -37,7 +40,26 @@ const projects = [
     githubUrl: "https://github.com/eeeunhey/spotify-ts-clone",
   },
 
-  // 🔹 새로 추가 — 면접 시뮬레이터 (팀)
+  {
+    id: 1,
+    title: "Ascend — 이력서 코칭 웹",
+    period: "2025.10–2025.12 (개인)",
+    description:
+      "이력서 업로드 → 항목별 피드백/점수/문구 개선 제안. ATS 관점의 키워드 맵과 수정 가이드 제공.",
+    image: "/images/ascend.png",
+    tags: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind",
+      "Puter.js",
+      "Zustand",
+      "React Query",
+    ],
+    demoUrl: "#",
+    githubUrl: "https://github.com/eeeunhey/Ascend",
+  },
+
   {
     id: 3,
     title: "Interview Simulator — 팀 프로젝트",
@@ -57,27 +79,26 @@ const projects = [
     githubUrl: "https://github.com/eeeunhey/MockInterview",
   },
 
-  // ✅ 기존 — Velin
   {
     id: 4,
     title: "Velin — AI Interview Prep",
     period: "2025.08–2025.09 (개인)",
     description:
       "면접 질문·근거·체크리스트 자동 생성, 세션별 분석을 제공하는 웹 서비스.",
-    image: "/images/velin-mainpage.png", // 기존 images/velin-logo.png → public/projects/velin/cover.png 권장
+    image: "/images/velin-mainpage.png",
     tags: ["Frontend", "Backend", "TypeScript", "React"],
-    demoUrl: "https://ai-interview-prep-3rshahg4n-eunhyes-projects-b3620ae0.vercel.app/",
+    demoUrl:
+      "https://ai-interview-prep-3rshahg4n-eunhyes-projects-b3620ae0.vercel.app/",
     githubUrl: "https://github.com/eeeunhey/AI_InterviewPrep",
   },
 
-  // ✅ 기존 — ALBAIT
   {
     id: 5,
     title: "ALBAIT — 콘솔 구인·구직 실습",
     period: "2025.04–2025.05 (개인)",
     description:
       "콘솔에서 회원/공고/지원 CRUD와 관리자 통계를 구현한 Java·Oracle 실습.",
-    image: "/images/ALBA-mainpage.png", // 기존 images/Alba-logo.png → 권장 경로
+    image: "/images/ALBA-mainpage.png",
     tags: ["Backend", "Database", "Java", "Oracle"],
     demoUrl: "https://github.com/eeeunhey/ALBAIT",
     githubUrl: "https://github.com/eeeunhey/ALBAIT",
@@ -128,8 +149,11 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* 제목 / 설명 */}
+                {/* 제목 / 기간 / 설명 */}
                 <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+                <p className="text-xs text-muted-foreground mb-2">
+                  {project.period}
+                </p>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
@@ -164,11 +188,11 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/eeeunhey"
           >
-            <Github/>Github에서 보기 <ArrowRight size={16} />
+            <Github /> Github에서 보기 <ArrowRight size={16} />
           </a>
-
         </div>
       </div>
     </section>
