@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>이력서</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ========= 첫 페이지: 사이드바 + 본문(프로필/경력/프로젝트 카드) ========= -->
+    <div class="resume">
+
+      <!-- ===== 왼쪽 사이드바 ===== -->
+      <aside>
+        <img src="images/eunhyeprofile.jpg" alt="Profile" class="aside-photo" />
+
+        <div class="aside-block">
+          <h3 class="aside-title">CONTACT</h3>
+          <ul class="aside-list">
+            <li>📞 +82-10-2627-1356</li>
+            <li>✉️ dmsgp2627@naver.com</li>
+            <li>🔗 github.com/eeeunhey</li>
+          </ul>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">EDUCATION</h3>
+          <div class="item" style="border-bottom:none; padding:0">
+            <div><b>성남 폴리텍 하이테크 과정</b></div>
+            <div class="meta">2024.01 – 2024.12</div>
+            <div class="meta">Java (Spring/Boot/MyBatis/JPA)<br />Python (LLM / Object Detection)</div>
+          </div>
+          <div class="item" style="border-bottom:none; padding:10px 0 0">
+            <div><b>KDT 국비 과정 수료</b></div>
+            <div class="meta">2023.03 – 2023.09</div>
+            <div class="meta">C/Java/Python 기초, 실습</div>
+          </div>
+          <div class="item" style="border-bottom:none; padding:10px 0 0">
+            <div><b>방송통신대(식품영양학)</b></div>
+            <div class="meta">2016.02 – 2021.02</div>
+          </div>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">KEY SKILLS</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; font-size:14px">
+            <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white" alt="Java" />
+            <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+            <img src="https://img.shields.io/badge/SQL-003B57?style=flat&logo=postgresql&logoColor=white" alt="SQL" />
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white" alt="Spring" />
+            <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat&logo=springboot&logoColor=white"
+              alt="Spring Boot" />
+            <img src="https://img.shields.io/badge/MyBatis-000000?style=flat&logo=databricks&logoColor=white"
+              alt="MyBatis" />
+            <img src="https://img.shields.io/badge/JPA-4B5563?style=flat&logo=hibernate&logoColor=white" alt="JPA" />
+            <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+            <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" alt="Vite" />
+            <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white"
+              alt="TailwindCSS" />
+            <img src="https://img.shields.io/badge/LLM-8B5CF6?style=flat&logo=openai&logoColor=white" alt="LLM" />
+            <img src="https://img.shields.io/badge/Object Detection-FF6F00?style=flat&logo=opencv&logoColor=white"
+              alt="Object Detection" />
+            <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git" />
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" />
+            <img src="https://img.shields.io/badge/C%23 WinForms-512BD4?style=flat&logo=dotnet&logoColor=white"
+              alt="C# WinForms" />
+          </div>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">CERTIFICATIONS</h3>
+          <ul class="aside-list">
+            <li>컴퓨터활용능력 1급, 2급</li>
+            <li>ITQ A등급 (한글, 엑셀, 파워포인트)</li>
+            <li>GTQ 1급, 2급</li>
+            <li>자동차운전면허 1종 보통</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ===== 오른쪽 본문 ===== -->
+      <main>
+        <header class="header">
+          <h2 class="name">문제에서 배움을 찾고 성장하는</h2><br />
+          <h1 class="name">김은혜 입니다</h1>
+          <div class="role">JUNIOR DEVELOPER (WEB · BACKEND · AI)</div>
+        </header>
+
+        <section class="section">
+          <h3 class="section-title">PROFESSIONAL PROFILE</h3>
+          <p>
+            저는 새로운 시도와 도전을 통해 문제를 발견하고 해결하며 성장해왔습니다.<br />
+            작은 단위로 나누어 해결하고 개선을 반복한 경험은 저를 더 나은 방향으로 이끌었고,<br />
+            앞으로도 이런 태도를 바탕으로 계속 발전해 나가겠습니다.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">EXPERIENCE</h3>
+
+          <div class="item">
+            <h4>솔루션팀 · 머신 비전 파트</h4>
+            <div class="meta">2024.02 – 2024.11</div>
+            <ul>
+              <li>비전 셋팅 및 카메라 파라미터 조정 지원</li>
+              <li>C# WinForms UI 일부 수정 및 테스트</li>
+              <li>테스트 결과 정리 및 개선 사항 보고</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h4>쿠팡 물류 · 전산 / 관리</h4>
+            <div class="meta">2019.03 – 2021.11</div>
+            <ul>
+              <li>단기 인력 배치와 스케줄 조율</li>
+              <li>출고 전산 흐름 점검 및 마감 관리</li>
+              <li>마감 시점의 소통·조율 업무</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== PROJECTS (목차 카드) ===== -->
+        <section class="section">
+          <h3 class="section-title">PROJECTS</h3>
+          <div class="proj-grid">
+            <!-- Velin 카드: 상세로 점프 -->
+            <a class="proj-card" href="#velin-detail">
+              <div class="proj-thumb"><img src="images/velin-logo.png" alt="Velin Logo" /></div>
+              <div class="proj-body">
+                <div class="proj-title">Velin — AI Interview Prep</div>
+                <div class="proj-date">2025.08–2025.09 (개인)</div>
+                <p class="proj-desc">면접 질문·근거·체크리스트 자동 생성, 세션별 분석을 제공하는 웹 서비스</p>
+                <div class="proj-meta">Frontend, Backend</div>
+              </div>
+            </a>
+
+            <!-- ALBAIT 카드: 상세로 점프 -->
+            <a class="proj-card" href="#albait-detail">
+              <div class="proj-thumb"><img src="images/Alba-logo.png" alt="ALBAIT Logo" /></div>
+              <div class="proj-body">
+                <div class="proj-title">ALBAIT — 콘솔 구인·구직 실습</div>
+                <div class="proj-date">2025.04–2025.05 (개인)</div>
+                <p class="proj-desc">콘솔에서 회원/공고/지원 CRUD와 관리자 통계를 구현한 Java·Oracle 실습</p>
+                <div class="proj-meta">Backend, Database</div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div> <!-- 🔚 여기서 .resume 끝!  -->
+
+    <!-- ✂ 새 페이지처럼 '딱 끊기' -->
+    <hr class="page-cut" />
+
+    <!-- ========= 아래부터는 사이드바 없이 단일 페이지 ========= -->
+
+    <!-- ========== Velin 상세 ========== -->
+    <section id="velin-detail" class="page">
+      <h2 class="proj-h-lg">Velin — AI Interview Prep</h2>
+      <div class="proj-sub">2025.08–2025.09 (개인) · Vite·React·Tailwind / Node·Express / Recharts / TanStack Query /
+        FFmpeg(WASM)</div>
+
+      <img class="hero" src="images/velin-mainpage.png" alt="Velin Screens" />
+
+      <div class="kv-rows">
+        <div class="kv-row">
+          <b>개요</b>
+          <p>면접 질문·근거·체크리스트 자동 생성과 멀티모달(영상/텍스트) 분석 기반
+            세션·질문 단위 리포트를 제공합니다.</p>
+        </div>
+
+        <div class="kv-row">
+          <b>개발 기간/인원</b>
+          <p>2025.08–2025.09 (6주) · 개인</p>
+        </div>
+
+        <div class="kv-row">
+          <b>기획 의도</b>
+          <ul>
+            <li>이론 학습만으로는 협업·운영 관점에서 부족함을 느꼈습니다</li>
+            <li>“함께 일하고 싶은 동료라면 어떤 질문과 근거가 필요할까?”라는 문제의식에서 출발했습니다</li>
+            <li>질문·참고 자료·체크리스트를 한눈에 제공하는 실무형 도구를 기획했습니다</li>
+          </ul>
+        </div>
+
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <div>
+            <ul>
+              <li>LLM 기반 질문/질문에 대한 근거 이론 / 코드 예시 제공</li>
+              <li>IT 직군별 실무 질문 생성 후 제공 </li>
+              <li>직군별 생성 질문 후 질문 추가 생성</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="16"
+                height="16" alt="">
+              React
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="16"
+                height="16" alt="">
+              Vite
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                width="16" height="16" alt="">
+              Tailwind
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="16"
+                height="16" alt="">
+              Node·Express
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="16"
+                height="16" alt="">
+              MongoDB
+            </span>
+          </div>
+        </div>
+
+        <!-- 성과·배운 점 -->
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <div>
+            <ul class="learn">
+              <li><b>프롬프트 템플릿 설계</b> 과정을 통해 AI 출력 제어·일관성 유지의 중요성을 배움</li>
+              <li><b>React–Express–MongoDB 연동</b>으로 프론트와 백엔드, DB 연결 구조를 이해</li>
+              <li><b>JWT 인증과 파일 업로드</b>를 적용하며 보안과 데이터 흐름 관리 경험 습득</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 참고 링크 -->
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/AI_InterviewPrep" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/AI_InterviewPrep
+            </a>
+          </div>
+        </div>
+      </div><!-- 🔚 kv-rows 닫음 -->
+    </section>
+
+    <!-- ========== ALBAIT 상세 ========== -->
+    <section id="albait-detail" class="page">
+      <h2 class="proj-h-lg">ALBAIT — 콘솔 구인·구직 사이트 구현</h2>
+      <div class="proj-sub">2025.04–2025.05 (개인) · Java · Oracle · JDBC · DAO/VO</div>
+
+      <img class="hero hero--sm" src="images/ALBA-mainpage.png" alt="ALBAIT Screens" />
+
+      <div class="kv-rows">
+        <div class="kv-row">
+          <b>개요</b>
+          <p>개인/기업 회원관리, 공고/지원/상태변경, 관리자 통계를 제공하는 콘솔 기반 프로젝트.</p>
+        </div>
+
+        <div class="kv-row">
+          <b>개발 기간/인원</b>
+          <p>2025.04–2025.05 (개인)</p>
+        </div>
+
+        <div class="kv-row">
+          <b>기획 의도</b>
+          <ul>
+            <li>단순 CRUD 예제로는 실제 구인·구직 서비스 구조를 충분히 이해하기 어렵다고 느꼈습니다</li>
+            <li>회원·공고·지원 흐름을 직접 설계하여 실제 구직 과정을 콘솔 환경에서 구현했습니다 </li>
+            <li>DB 설계, DAO/VO, 트랜잭션 처리 등 실무 아키텍처 패턴을 학습하기 위해 프로젝트 진행 하였습니다</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <div>
+            <ul>
+              <li>개인/기업 회원, 공고 등록/지원, 지원 상태 변경</li>
+              <li>관리자 통계(사용자/지원 현황) 조회</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="16"
+                height="16" alt="">
+              Java
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="16"
+                height="16" alt="">
+              Oracle
+            </span>
+            <span class="chip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="16"
+                height="16" alt="">
+              JDBC
+            </span>
+            <span class="chip">
+              <img src="https://cdn-icons-png.flaticon.com/512/1995/1995454.png" width="16" height="16" alt="">
+              DAO/VO
+            </span>
+          </div>
+        </div>
+
+        <!-- 성과·배운 점 -->
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <div>
+            <ul class="learn">
+              <li><b>인덱스와 실행계획 분석</b>을 통해 SQL 성능 최적화 원리 학습</li>
+              <li><b>DAO/Service 분리</b>로 계층형 아키텍처 설계의 중요성 이해</li>
+              <li><b>예외 처리와 트랜잭션 관리</b>를 통해 안정적인 데이터 흐름 관리 방법을 습득</li>
+              <li><b>회원–공고–지원 흐름</b>을 구현하며 실제 구직 서비스 구조를 콘솔 환경에서 모사하는 경험</li>
+              <li><b>데이터베이스 모델링과 DAO/VO 패턴</b>을 통해 실무형 서비스 설계 감각을 익힘</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 참고 링크 -->
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="ref-list">
+            <a class="ref-link" href="https://github.com/eeeunhey/AlbaItProject" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              <span>https://github.com/eeeunhey/AlbaItProject</span>
+            </a>
+          </div>
+        </div>
+      </div><!-- 🔚 kv-rows 닫음 -->
+    </section>
+
+    <!-- 화면 구분선 -->
+    <div class="page-break"></div>
+
+    <!-- ====== About Me (새 페이지) ====== -->
+    <section id="about-me" class="page">
+      <div class="about">
+
+        <h2>자기소개서</h2>
+        <h3>성격 / 태도</h3>
+        <p>
+          안녕하세요 저는 경험 속에서 배우며 성장하는 김은혜입니다.
+          여러 직무와 프로젝트를 수행하면서 ‘완벽한 개인’보다 ‘함께 배우는 팀’이 더 큰 성과를 만든다는 것을 배웠습니다.
+          그래서 언제나 협력 속에서 배우고, 배운 것을 다시 나누려 노력합니다.
+          저는 누군가가 어려움을 겪고 있을 때 그냥 지나치지 못하는 성격입니다.
+          제가 도움이 될 수 있는 부분이 있다면 주저하지 않고 함께 해결하려 합니다.
+          이러한 성향은 여러 업무를 경험하며 더욱 확고해졌습니다.
+          좋은 동료들과 함께 일하면서 많은 도움을 받았고, 그에 보답하고 싶다는 마음으로 자연스럽게 협력에 참여했습니다.
+          협력으로 일을 빠르고 완성도 있게 마무리했던 경험은 팀워크의 가치를 깊이 깨닫게 해준 기억으로 남아 있습니다.
+          또한 과거에 제가 도왔던 분들이, 제가 어려움을 겪을 때 다시 손을 내밀어주셨던 경험을 통해 ‘협력의 선순환’ 을 배웠습니다.
+          저는 협력할 부분은 적극적으로 협력하되, 각자의 역할은 끝까지 책임감 있게 수행해야 한다고 생각합니다.
+
+        </p>
+
+        <p>
+          성장노력
+        </p>
+        <p>
+          성격
+
+
+        </p>
+
+        <!-- ✅ 나를 보여주는 첫 문단 추가 -->
+        <p>
+          저는 문제를 마주했을 때 단순히 ‘왜 안 되는지’를 찾기보다
+          <b>‘서로 다른 기술과 아이디어를 어떻게 결합하면 더 나은 구조로 발전시킬 수 있을까’</b>를 고민합니다.<br />
+          새로운 기술을 배울 때도 단순히 기능을 익히는 데 그치지 않고,
+          그것이 기존 흐름과 어떤 방식으로 연결될 수 있는지를 직접 실험하며 이해하는 것을 좋아합니다.<br />
+          <b>이런 탐구의 과정 속에서</b> 문제 상황은 오히려 새로운 조합을 시도할 기회가 되었고,
+          그 과정에서 개발의 진짜 즐거움을 느꼈습니다.
+        </p>
+
+        <p>
+          프로젝트를 진행하면서 단순히 기능이 동작하는 것보다,
+          <b>“왜 이 문제가 발생했고, 어떻게 구조적으로 개선할 수 있을까”</b>를 중심으로 접근했습니다.<br />
+          아래는 그 과정에서 실제로 느낀 문제와 이를 해결하기 위해 적용한 경험들입니다.
+        </p>
+
+        <!-- TypeScript -->
+        <div class="problem-item">
+          <h5>🟦 명확한 타입 정의로 유지보수 속도를 개선</h5>
+          <ul>
+            <li>
+              React 프로젝트를 진행하며 컴포넌트 간 데이터 전달이 많아지자,
+              <b>어떤 props가 어디서 넘어오고, 어떤 타입으로 쓰이는지</b>를 추적하는 데 많은 시간을 쏟게 되었습니다.
+              데이터 구조가 조금만 바뀌어도 연쇄적으로 오류가 발생해 유지보수가 점점 어려워졌습니다.
+            </li>
+            <li>
+              이런 반복적인 불편함을 줄이기 위해 TypeScript를 도입했습니다.
+              타입을 명확히 지정하니 IDE에서 <b>자동완성·오류 탐지·함수 추적</b>이 가능해졌고,
+              수정 시 영향 범위를 빠르게 파악할 수 있었습니다.
+            </li>
+            <li>
+              특히 여러 API가 동시에 호출되는 화면에서 <b>데이터 구조가 바뀌면 즉시 에러가 표시</b>되어,
+              런타임 오류보다 훨씬 빠르게 문제를 인식하고 대응할 수 있었습니다.<br />
+              단순한 타입 검증을 넘어서, 코드의 흐름이 <b>눈에 보이는 구조</b>로 바뀌는 경험이었습니다.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zustand -->
+        <div class="problem-item">
+          <h5>🟩 Zustand 기반 전역 스토어 리팩터링으로 상태 불일치 개선</h5>
+          <ul>
+            <li>
+              React 프로젝트가 커지면서 여러 컴포넌트가 각자 상태를 관리하게 되었고,
+              한쪽의 변경이 다른 화면에 반영되지 않거나 데이터가 어긋나는 문제가 발생했습니다.
+            </li>
+            <li>
+              프로젝트가 커지면서 여러 컴포넌트가 동일한 데이터를 서로 다른 방식으로 관리하면서,
+              <b>하나의 수정이 다른 화면에 반영되지 않거나 예기치 않은 재렌더링</b>이 자주 일어났습니다.
+            </li>
+            <li>
+              이를 해결하기 위해 Zustand를 도입해 상태를 <b>한 곳에서 일관되게 관리</b>하도록 구조를 변경했습니다.
+              전역 스토어로 감정·집중도·답변 데이터를 통합하고,
+              각 컴포넌트는 필요한 값만 구독하도록 분리하니
+              화면이 안정적으로 동기화되고 <b>렌더 효율</b>도 향상되었습니다.
+            </li>
+            <li>
+              현재는 작은 기능부터 점진적으로 Zustand를 확장하며,
+              <b>단일 소스·명확한 액션·불필요한 렌더 최소화</b> 원칙을 중심으로 구조를 다듬고 있습니다.
+            </li>
+          </ul>
+        </div>
+
+        <!-- DAO / DTO -->
+        <div class="problem-item">
+          <h5>🟧 DAO/DTO 패턴으로 DB 연동 구조 개선 및 유지보수성 향상</h5>
+          <ul>
+            <li>
+              콘솔 기반 <b>ALBAIT</b> 프로젝트에서는 게시글 등록과 회원 데이터를 DB와 직접 연동했습니다.
+              처음에는 SQL 쿼리를 코드 안에서 바로 호출했지만,<br />
+              기능이 늘어날수록 의존 관계가 복잡해지고 수정 시 오류가 잦았습니다.
+            </li>
+            <li>
+              이를 해결하기 위해 <b>DAO/DTO 패턴</b>을 도입해
+              <b>요청 → DB 처리 → 응답</b> 과정을 단계별로 나눴습니다.<br>
+              이전에는 코드 곳곳에서 SQL을 직접 다뤘지만,
+              지금은 데이터 흐름이 한눈에 보이고 수정할 위치도 명확해졌습니다.<br>
+              <b>데이터가 어디서 만들어지고, 어디로 전달되는지</b> 흐름이 뚜렷해지면서
+              오류를 찾고 수정하는 시간이 크게 줄었습니다.
+            </li>
+          </ul>
+
+          <p class="conclusion">
+            여러 프로젝트를 하면서, <b>데이터와 상태는 서로 영향을 주기 때문에 하나의 흐름 안에서 함께 관리해야 한다</b>는 걸 배웠습니다.<br>
+            저는 단순히 문제를 해결하는 데서 멈추지 않고, <b>구조를 분석하고 개선점을 찾아내 실제 성과로 이어지게 하는 과정</b>에서 보람을 느낍니다.<br>
+            새로운 기술이나 접근법이 등장할 때마다, 이를 기존 시스템에 <b>효율적으로 결합해 속도나 유지보수성을 개선하는 방법</b>을 꾸준히 실험해왔습니다.<br>
+            작업할 때는 ‘이 코드가 전체 구조 속에서 어떤 가치를 만들어내는가’를 항상 고려하며,
+            문제를 부분적으로 보기보다, <b>전체 흐름 속에서 가장 합리적인 해결 방법</b>을 찾으려 합니다.<br>
+            이런 접근을 통해 기능을 안정적으로 개선하고, 복잡한 로직을 단순화해 팀의 효율을 높이기 위해 꾸준히 노력하고 있습니다.<br><br>
+            앞으로는 구조적 사고를 기반으로, <b>성과를 단순히 내는 데 그치지 않고, 그 결과를 분석하고 보완하며 한 단계 더 나은 가치를 만들어가는 개발자</b>로 성장하고자 합니다.<br>
+            <b>다양한 기술과 아이디어를 함께 엮어 더 큰 성과를 만들어가는 사람</b>이 되고 싶습니다.
+          </p>
+        </div>
+
+        <!-- ✅ 나를 보여주는 마지막 문단 추가 -->
+
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>

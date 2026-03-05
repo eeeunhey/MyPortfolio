@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-bind="page_title">이력서</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+  <div class="container" role="document">
+
+    <!-- ========= 첫 페이지: 사이드바 + 본문 ========= -->
+    <div class="resume">
+
+      <!-- ===== 왼쪽 사이드바 ===== -->
+      <aside aria-label="sidebar">
+        <img class="aside-photo" data-bind-src="profile.photo" data-bind-alt="profile.photo_alt" />
+
+        <div class="aside-block">
+          <h3 class="aside-title">CONTACT</h3>
+          <ul class="aside-list">
+            <li><a data-bind-href="contact.tel_href" data-bind="contact.tel_label"></a></li>
+            <li><a data-bind-href="contact.email_href" data-bind="contact.email"></a></li>
+            <li><a data-bind-href="contact.github" target="_blank" rel="noopener" data-bind="contact.github_label"></a></li>
+          </ul>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">EDUCATION</h3>
+          <div data-loop="education">
+            <div class="item" style="border-bottom:none; padding:10px 0 0">
+              <div><b data-bind="title"></b></div>
+              <div class="meta" data-bind="period"></div>
+              <div class="meta" data-bind="desc"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">KEY SKILLS</h3>
+          <!-- 배지 대신 텍스트 태그를 권장하지만, 필요하면 이미지도 바인딩 가능 -->
+          <div class="tags" data-loop="skills">
+            <span class="tag" data-bind="."></span>
+          </div>
+        </div>
+
+        <div class="aside-block">
+          <h3 class="aside-title">CERTIFICATIONS</h3>
+          <ul class="aside-list" data-loop="certs">
+            <li data-bind="."></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ===== 오른쪽 본문 ===== -->
+      <main role="main">
+        <header class="header">
+          <h2 class="name" data-bind="headline"></h2><br />
+          <h1 class="name" data-bind="profile.name"></h1>
+          <div class="role" data-bind="profile.role"></div>
+        </header>
+
+        <section class="section">
+          <h3 class="section-title">PROFESSIONAL PROFILE</h3>
+          <p data-bind="profile.summary_html" data-unsafe-html></p>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">EXPERIENCE</h3>
+
+          <div class="item" data-loop="experience">
+            <h4><span data-bind="company"></span> · <span data-bind="team"></span></h4>
+            <div class="meta" data-bind="period"></div>
+            <ul data-loop="bullets">
+              <li data-bind="."></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== PROJECTS (목차 카드) ===== -->
+        <section class="section">
+          <h3 class="section-title">PROJECTS</h3>
+          <div class="proj-grid" data-loop="projects">
+            <a class="proj-card" data-bind-href="detail_anchor">
+              <div class="proj-thumb">
+                <img data-bind-src="thumb" data-bind-alt="title" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-title" data-bind="title"></div>
+                <div class="proj-date" data-bind="period"></div>
+                <p class="proj-desc" data-bind="brief"></p>
+                <div class="proj-meta" data-bind="meta"></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div> <!-- 🔚 .resume 끝 -->
+
+    <!-- ✂ 새 페이지처럼 '딱 끊기' -->
+    <hr class="page-cut" />
+
+    <!-- ========= 아래부터는 사이드바 없이 단일 페이지 ========= -->
+
+    <!-- ========== Velin 상세 등 (프로젝트 상세 반복) ========== -->
+    <section class="page" data-loop="project_details">
+      <h2 class="proj-h-lg" data-bind="title"></h2>
+      <div class="proj-sub" data-bind="subtitle"></div>
+
+      <img class="hero" data-bind-src="hero" data-bind-alt="title" />
+
+      <div class="kv-rows">
+        <div class="kv-row">
+          <b>개요</b>
+          <p data-bind="overview"></p>
+        </div>
+
+        <div class="kv-row" data-if="period_people">
+          <b>개발 기간/인원</b>
+          <p data-bind="period_people"></p>
+        </div>
+
+        <div class="kv-row" data-if="intent">
+          <b>기획 의도</b>
+          <ul data-loop="intent"><li data-bind="."></li></ul>
+        </div>
+
+        <div class="kv-row" data-if="features">
+          <b>핵심기능</b>
+          <ul data-loop="features"><li data-bind="."></li></ul>
+        </div>
+
+        <div class="kv-row" data-if="stack">
+          <b>기술스택</b>
+          <div class="chips" data-loop="stack"><span class="chip" data-bind="."></span></div>
+        </div>
+
+        <div class="kv-row" data-if="learnings">
+          <b>성과·배운 점</b>
+          <ul class="learn" data-loop="learnings"><li data-bind="."></li></ul>
+        </div>
+
+        <div class="kv-row" data-if="links">
+          <b>참고 링크</b>
+          <div class="refs" data-loop="links">
+            <a class="ref-link" target="_blank" rel="noopener" data-bind-href="href" data-bind="label"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 화면 구분선 -->
+    <div class="page-break"></div>
+
+    <!-- ====== About Me (새 페이지) ====== -->
+    <section id="about-me" class="page">
+      <h2 class="proj-h-lg">ABOUT ME</h2>
+
+      <div class="about" data-loop="about_blocks">
+        <section class="about-block">
+          <h4 data-bind="title"></h4>
+          <p data-bind="body"></p>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <script src="resume.js"></script>
+  <script>
+    // ?data=data/company-foo.json 으로 교체 가능
+    const params = new URLSearchParams(location.search);
+    const dataFile = params.get('data') || 'data/base.json';
+    window.__loadResume__(dataFile);
+  </script>
+</body>
+</html>

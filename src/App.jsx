@@ -1,22 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { NotFound } from "./pages/NotFound"
 import { Home } from "./pages/Home"
-import { useState } from "react"; 
-
+import { ProjectDetailPage } from "./pages/ProjectDetailPage"
+import { ResumePage } from "./pages/ResumePage"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />}/>
-
-        <Route path="*" element={<NotFound/>}/>
+        <Route index element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetailPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-    </>
   )
 }
 
