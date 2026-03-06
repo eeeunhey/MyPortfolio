@@ -31,6 +31,11 @@
         <div class="aside-block">
           <h3 class="aside-title">EDUCATION</h3>
           <div class="item" style="border-bottom:none; padding:0">
+            <div><b>고려사이버대학교</b></div>
+            <div class="meta">2026.03 – (편입재학)</div>
+            <div class="meta">AI 데이터과학부</div>
+          </div>
+          <div class="item" style="border-bottom:none; padding:10px 0 0">
             <div><b>성남 폴리텍 하이테크 과정</b></div>
             <div class="meta">2024.01 – 2024.12</div>
             <div class="meta">Java (Spring/Boot/MyBatis/JPA)<br />Python (LLM / Object Detection)</div>
@@ -41,8 +46,9 @@
             <div class="meta">C/Java/Python 기초, 실습</div>
           </div>
           <div class="item" style="border-bottom:none; padding:10px 0 0">
-            <div><b>방송통신대(식품영양학)</b></div>
+            <div><b>한국방송통신대학교 졸업</b></div>
             <div class="meta">2016.02 – 2021.02</div>
+            <div class="meta">식품영양학과</div>
           </div>
         </div>
 
@@ -147,6 +153,60 @@
                 <div class="proj-date">2025.04–2025.05 (개인)</div>
                 <p class="proj-desc">콘솔에서 회원/공고/지원 CRUD와 관리자 통계를 구현한 Java·Oracle 실습</p>
                 <div class="proj-meta">Backend, Database</div>
+              </div>
+            </a>
+            <!-- Interview Simulator 카드 -->
+            <a class="proj-card" href="#interview-detail">
+              <div class="proj-thumb"><img src="../images/Mockinterview.png" alt="Interview Simulator" /></div>
+              <div class="proj-body">
+                <div class="proj-title">Interview Simulator</div>
+                <div class="proj-date">2025.09–2025.11 (팀)</div>
+                <p class="proj-desc">AI 면접 질문 생성, STT, 감정/집중도 시각화, 세션 리포트 제공</p>
+                <div class="proj-meta">React, TypeScript, WebRTC, Node/Express, MongoDB</div>
+              </div>
+            </a>
+
+            <!-- Ascend 카드 -->
+            <a class="proj-card" href="#ascend-detail">
+              <div class="proj-thumb"><img src="../images/ascend.png" alt="Ascend" /></div>
+              <div class="proj-body">
+                <div class="proj-title">Ascend — 이력서 코치 웹</div>
+                <div class="proj-date">2025.10–2025.12 (개인)</div>
+                <p class="proj-desc">이력서 업로드 → AI 항목별 점수·피드백·키워드 개선 제안</p>
+                <div class="proj-meta">React, TypeScript, Zustand, React Query, Puter.js</div>
+              </div>
+            </a>
+
+            <!-- ResumeBuilder 카드 -->
+            <a class="proj-card" href="#resumebuilder-detail">
+              <div class="proj-thumb"><img src="../images/resumeBuild.png" alt="ResumeBuilder" /></div>
+              <div class="proj-body">
+                <div class="proj-title">ResumeBuilder — 이력서 작성 지원</div>
+                <div class="proj-date">2025.10–2025.11 (개인)</div>
+                <p class="proj-desc">섹센별 입력 가이드와 실시간 미리보기로 작성 효율 개선</p>
+                <div class="proj-meta">React, TypeScript, Vite</div>
+              </div>
+            </a>
+
+            <!-- BalanceEat 카드 -->
+            <a class="proj-card" href="#balanceeat-detail">
+              <div class="proj-thumb"><img src="../images/BalanceEat.png" alt="BalanceEat" /></div>
+              <div class="proj-body">
+                <div class="proj-title">BalanceEat — AI 식단 관리</div>
+                <div class="proj-date">2025.10–2025.11 (팀)</div>
+                <p class="proj-desc">Gemini AI 기반 식단 추천·기록·시각화 서비스</p>
+                <div class="proj-meta">React, TypeScript, Gemini AI API</div>
+              </div>
+            </a>
+
+            <!-- Daily Emotion Log 카드 -->
+            <a class="proj-card" href="#emotion-detail">
+              <div class="proj-thumb"><img src="../images/EmotionLog.png" alt="Daily Emotion Log" /></div>
+              <div class="proj-body">
+                <div class="proj-title">Daily Emotion Log — 감정 기록</div>
+                <div class="proj-date">2025.12 (팀)</div>
+                <p class="proj-desc">감정 기록·AI 피드백·패턴 시각화 웹 서비스</p>
+                <div class="proj-meta">JavaScript, Flask, MariaDB, Gemini API</div>
               </div>
             </a>
           </div>
@@ -348,130 +408,430 @@
     <!-- 화면 구분선 -->
     <div class="page-break"></div>
 
+    <!-- ========== Interview Simulator 상세 ========== -->
+    <section id="interview-detail" class="page">
+      <h2 class="proj-h-lg">Interview Simulator — AI 모의 면접</h2>
+      <div class="proj-sub">2025.09–2025.11 (팀) · React · TypeScript · Recharts · WebRTC · Node.js · Express · MongoDB
+      </div>
+      <img class="hero" src="../images/Mockinterview.png" alt="Interview Simulator" />
+      <div class="kv-rows">
+        <div class="kv-row"><b>개요</b>
+          <p>AI 면접 질문 생성부터 STT 기반 답변 분석, 감정·집중도 시각화, 세션 리포트까지 제공하는 모의 면접 웹 서비스입니다.</p>
+        </div>
+        <div class="kv-row"><b>개발 기간/인원</b>
+          <p>2025.09–2025.11 (3개월) · 팀 프로젝트 / 담당: Frontend</p>
+        </div>
+        <div class="kv-row">
+          <b>역할</b>
+          <ul>
+            <li>질문 생성 UI 설계 및 컨트롤 플로우 구현</li>
+            <li>Recharts 기반 감정/집중도 시각화 컴포넌트 제작</li>
+            <li>WebRTC 화상 면접 지원 연동</li>
+            <li>세션 리포트 페이지 구현</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <ul>
+            <li>AI 기반 면접 질문 자동 생성</li>
+            <li>STT(Speech-to-Text) 실시간 답변 인식</li>
+            <li>감정/집중도 분석 시각화 (Recharts)</li>
+            <li>WebRTC 기반 화상 인터븷° 지원</li>
+            <li>백그라운드 업로드 및 세션 리포트</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width="16" height="16" alt="">React</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16"
+                height="16" alt="">TypeScript</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                width="16" height="16" alt="">Node.js</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="16"
+                height="16" alt="">MongoDB</span>
+            <span class="chip">🟢 WebRTC</span>
+            <span class="chip">📊 Recharts</span>
+          </div>
+        </div>
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <ul class="learn">
+            <li><b>WebRTC</b> 화상 스트림 연동으로 P2P 통신 구조 이해</li>
+            <li><b>Recharts</b> 로 실시간 데이터 시각화 컴포넌트 설계 경험</li>
+            <li>팀 협업에서 정해진 인터페이스 기반 고첨합 역량 향상</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/MockInterview" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/MockInterview
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- ========== Ascend 상세 ========== -->
+    <section id="ascend-detail" class="page">
+      <h2 class="proj-h-lg">Ascend — AI 이력서 코치 웹</h2>
+      <div class="proj-sub">2025.10–2025.12 (개인) · TypeScript · React · Vite · Tailwind CSS · Zustand · React Query ·
+        Puter.js</div>
+      <img class="hero" src="../images/ascend.png" alt="Ascend" />
+      <div class="kv-rows">
+        <div class="kv-row"><b>개요</b>
+          <p>이력서 PDF를 업로드하면 AI가 섹션별 점수·피드백·키워드 개선안을 제시하는 이력서 코칭 웹 서비스입니다.</p>
+        </div>
+        <div class="kv-row"><b>개발 기간/인원</b>
+          <p>2025.10–2025.12 (3개월) · 개인</p>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <ul>
+            <li>이력서 PDF 업로드 및 텍스트 추출 (Puter.js)</li>
+            <li>AI 기반 항목별 점수 및 피드백</li>
+            <li>ATS 키워드 맵 시각화</li>
+            <li>섹션별 문구 개선 제안</li>
+            <li>Zustand 전역 상태 관리</li>
+            <li>React Query 비동기 처리</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width="16" height="16" alt="">React</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16"
+                height="16" alt="">TypeScript</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg"
+                width="16" height="16" alt="">Vite</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="16"
+                height="16" alt="">Tailwind</span>
+            <span class="chip">📦 Zustand</span>
+            <span class="chip">⚡ React Query</span>
+          </div>
+        </div>
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <ul class="learn">
+            <li><b>Zustand</b> 전역 스토어로 상태 일관성 확보 및 불필요한 리렌더 최소화 경험</li>
+            <li><b>React Query</b>로 비동기 데이터 쪬싱과 로딩/에러 상태 관리 학습</li>
+            <li>PDF 텍스트 추출과 AI 연동 플로우 설계 경험</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/Ascend" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/Ascend
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- ========== ResumeBuilder 상세 ========== -->
+    <section id="resumebuilder-detail" class="page">
+      <h2 class="proj-h-lg">ResumeBuilder — 이력서 작성 지원 웹</h2>
+      <div class="proj-sub">2025.10–2025.11 (개인) · TypeScript · React · Vite · State Management</div>
+      <img class="hero" src="../images/resumeBuild.png" alt="ResumeBuilder" />
+      <div class="kv-rows">
+        <div class="kv-row"><b>개요</b>
+          <p>구직자가 항목별 가이드에 따라 이력서를 작성하고, 실시간으로 미리보기 가능한 이력서 빌더 웹앱입니다.</p>
+        </div>
+        <div class="kv-row"><b>개발 기간/인원</b>
+          <p>2025.10–2025.11 (2개월) · 개인</p>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <ul>
+            <li>섹션별(경력/학력/스킬/프로젝트) 구조화된 입력 폼</li>
+            <li>실시간 이력서 미리보기 패널</li>
+            <li>상태 관리 기반 입력 데이터 유지</li>
+            <li>UX 중심의 입력 가이드 메시지</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width="16" height="16" alt="">React</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16"
+                height="16" alt="">TypeScript</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg"
+                width="16" height="16" alt="">Vite</span>
+          </div>
+        </div>
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <ul class="learn">
+            <li>React 상태와 폼 핸들링을 같이 설계하는 구조 학습</li>
+            <li>데이터 입력 흐름과 UI 갱신 효율 최적화 경험</li>
+            <li>사용자 열람을 고려한 UX 응용 설계 연습</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/ResumeBuilder" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/ResumeBuilder
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- ========== BalanceEat 상세 ========== -->
+    <section id="balanceeat-detail" class="page">
+      <h2 class="proj-h-lg">BalanceEat — AI 식단 관리</h2>
+      <div class="proj-sub">2025.10–2025.11 (팀) · React · TypeScript · Gemini AI API · Nutrition API · Local Storage ·
+        Figma</div>
+      <img class="hero" src="../images/BalanceEat.png" alt="BalanceEat" />
+      <div class="kv-rows">
+        <div class="kv-row"><b>개요</b>
+          <p>음식 섭취 기록과 AI 식단 분석을 통해 균형잡힌 식단 관리를 도와주는 웹 서비스입니다.</p>
+        </div>
+        <div class="kv-row"><b>개발 기간/인원</b>
+          <p>2025.10–2025.11 (2개월) · 4인 팀 / 담당: PO / Frontend</p>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <ul>
+            <li>Nutrition API 기반 음식 영양 정보 검색</li>
+            <li>Gemini AI를 활용한 맞춤 식단 추천</li>
+            <li>섭취량 시각화 (칼로리/영양소 차트)</li>
+            <li>식단 기록 &amp; 날짜별 히스토리</li>
+            <li>Local Storage 기반 데이터 영속화</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width="16" height="16" alt="">React</span>
+            <span class="chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16"
+                height="16" alt="">TypeScript</span>
+            <span class="chip">🤖 Gemini AI</span>
+            <span class="chip">🍎 Nutrition API</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                width="16" height="16" alt="">Figma</span>
+          </div>
+        </div>
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <ul class="learn">
+            <li><b>PO 역할</b>에서 요구사항 정리뿐 아니라 전체 진행 흐름 관리 경험</li>
+            <li>AI API 연동과 사용자 정품질 개선 반복 경험</li>
+            <li>Local Storage 설계로 데이터 지속성 유지 방법 학습</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/balanceeat" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/balanceeat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- ========== Daily Emotion Log 상세 ========== -->
+    <section id="emotion-detail" class="page">
+      <h2 class="proj-h-lg">Daily Emotion Log — 감정 기록</h2>
+      <div class="proj-sub">2025.12 (팀) · HTML · CSS · JavaScript · Flask (Python) · MariaDB · Google Gemini API ·
+        Cloudtype</div>
+      <img class="hero" src="../images/EmotionLog.png" alt="Daily Emotion Log" />
+      <div class="kv-rows">
+        <div class="kv-row"><b>개요</b>
+          <p>하루를 마무리하며 감정을 기록하고, AI 기반 피드백과 패턴 시각화로 자기 이해를 돕는 웹 서비스입니다.</p>
+        </div>
+        <div class="kv-row"><b>개발 기간/인원</b>
+          <p>2025.12 (1개월) · 5인 팀 / 담당: PM / Full-stack</p>
+        </div>
+        <div class="kv-row">
+          <b>목적 및 역할</b>
+          <ul>
+            <li>PM으로서 요구사항 정리 및 일정 관리</li>
+            <li>Flask 백엔드 API 설계 및 구현</li>
+            <li>Gemini API 연동으로 감정 분석 기능 구현</li>
+            <li>Cloudtype 배포 설정</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>핵심기능</b>
+          <ul>
+            <li>감정 선택 + 자유 메모 입력 UI</li>
+            <li>AI(Gemini API)를 통한 감정 분석 및 피드백</li>
+            <li>날짜별 감정 시각화 (차트 &amp; 타임라인)</li>
+            <li>세션 리포트 및 감정 트렌드 확인</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>기술스택</b>
+          <div class="chips">
+            <span class="chip">🌐 HTML/CSS/JS</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                width="16" height="16" alt="">Python</span>
+            <span class="chip">🏗️ Flask</span>
+            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                width="16" height="16" alt="">MariaDB</span>
+            <span class="chip">🤖 Gemini API</span>
+            <span class="chip">☁️ Cloudtype</span>
+          </div>
+        </div>
+        <div class="kv-row">
+          <b>성과·배운 점</b>
+          <ul class="learn">
+            <li><b>PM 공식 역할</b>으로 팀원 일정 및 이슈 비의선 조율 경험</li>
+            <li>Flask + MariaDB 연동으로 Python 백엔드 Full-stack 구현 경험</li>
+            <li>Cloudtype 클라우드 배포로 실제 운영 환경 구성 학습</li>
+          </ul>
+        </div>
+        <div class="kv-row">
+          <b>참고 링크</b>
+          <div class="refs">
+            <a class="ref-link" href="https://github.com/eeeunhey/daily-emotion-log" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                class="icon">
+              https://github.com/eeeunhey/daily-emotion-log
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 화면 구분선 -->
+    <div class="page-break"></div>
+
     <!-- ====== About Me (새 페이지) ====== -->
     <section id="about-me" class="page">
       <div class="about">
 
         <h2>자기소개서</h2>
-        <h3>성격 / 태도</h3>
-        <p>
-          안녕하세요 저는 경험 속에서 배우며 성장하는 김은혜입니다.
-          여러 직무와 프로젝트를 수행하면서 ‘완벽한 개인’보다 ‘함께 배우는 팀’이 더 큰 성과를 만든다는 것을 배웠습니다.
-          그래서 언제나 협력 속에서 배우고, 배운 것을 다시 나누려 노력합니다.
-          저는 누군가가 어려움을 겪고 있을 때 그냥 지나치지 못하는 성격입니다.
-          제가 도움이 될 수 있는 부분이 있다면 주저하지 않고 함께 해결하려 합니다.
-          이러한 성향은 여러 업무를 경험하며 더욱 확고해졌습니다.
-          좋은 동료들과 함께 일하면서 많은 도움을 받았고, 그에 보답하고 싶다는 마음으로 자연스럽게 협력에 참여했습니다.
-          협력으로 일을 빠르고 완성도 있게 마무리했던 경험은 팀워크의 가치를 깊이 깨닫게 해준 기억으로 남아 있습니다.
-          또한 과거에 제가 도왔던 분들이, 제가 어려움을 겪을 때 다시 손을 내밀어주셨던 경험을 통해 ‘협력의 선순환’ 을 배웠습니다.
-          저는 협력할 부분은 적극적으로 협력하되, 각자의 역할은 끝까지 책임감 있게 수행해야 한다고 생각합니다.
 
+        <!-- ── 1. 개발을 선택한 이유 ── -->
+        <h3>개발을 선택한 이유</h3>
+        <p>
+          개발을 공부하며 가장 흥미로웠던 점은, <b>작은 아이디어를 실제로 구현하고, 눈에 보이는 결과물로 만들 수 있다</b>는 점이었습니다.
+          처음엔 모든 것이 낯설고 어렵게 느껴졌지만, 기술을 하나씩 익히고 적용해보는 과정에서 스스로 성장하고 있다는 실감을 얻을 수 있었고,
+          그 경험이 계속해서 배우고 싶은 원동력이 되었습니다.
         </p>
 
+        <!-- ── 2. 학습 방식 ── -->
+        <h3>나만의 학습 방식</h3>
         <p>
-          성장노력
+          무언가를 새롭게 배울 때는 늘 <b>'이건 왜 필요한가'</b>라는 질문부터 시작합니다.
+          기술의 목적과 맥락을 먼저 이해하려고 하면 자연스럽게 구조와 흐름이 보이기 때문에, 이후의 학습이나 응용도 훨씬 수월해지는 것을 느꼈습니다.
+          단순히 따라 하기보다는, <b>스스로 납득하며 익히는 방식</b>을 중요하게 생각합니다.
         </p>
         <p>
-          성격
-
-
-        </p>
-
-        <!-- ✅ 나를 보여주는 첫 문단 추가 -->
-        <p>
-          저는 문제를 마주했을 때 단순히 ‘왜 안 되는지’를 찾기보다
-          <b>‘서로 다른 기술과 아이디어를 어떻게 결합하면 더 나은 구조로 발전시킬 수 있을까’</b>를 고민합니다.<br />
+          저는 문제를 마주했을 때 단순히 '왜 안 되는지'를 찾기보다
+          <b>'서로 다른 기술과 아이디어를 어떻게 결합하면 더 나은 구조로 발전시킬 수 있을까'</b>를 고민합니다.
           새로운 기술을 배울 때도 단순히 기능을 익히는 데 그치지 않고,
-          그것이 기존 흐름과 어떤 방식으로 연결될 수 있는지를 직접 실험하며 이해하는 것을 좋아합니다.<br />
-          <b>이런 탐구의 과정 속에서</b> 문제 상황은 오히려 새로운 조합을 시도할 기회가 되었고,
+          그것이 기존 흐름과 어떤 방식으로 연결될 수 있는지를 직접 실험하며 이해하는 것을 좋아합니다.
+          이런 탐구의 과정 속에서 문제 상황은 오히려 새로운 조합을 시도할 기회가 되었고,
           그 과정에서 개발의 진짜 즐거움을 느꼈습니다.
         </p>
 
+        <!-- ── 3. 협업과 책임감 ── -->
+        <h3>협업과 책임감</h3>
         <p>
-          프로젝트를 진행하면서 단순히 기능이 동작하는 것보다,
-          <b>“왜 이 문제가 발생했고, 어떻게 구조적으로 개선할 수 있을까”</b>를 중심으로 접근했습니다.<br />
-          아래는 그 과정에서 실제로 느낀 문제와 이를 해결하기 위해 적용한 경험들입니다.
+          개인적인 학습 외에도 여러 팀 프로젝트를 경험하며, <b>혼자만 잘하는 것보다 함께 결과를 만들어가는 과정의 의미</b>를 더 크게 느끼게 되었습니다.
+          역할을 나누고, 의견을 모으고, 때로는 갈등을 조율해가며 하나의 결과물을 만들어가는 일은 쉽지 않았지만,
+          그 과정에서 내가 맡은 부분을 잘 해내는 것 이상의 <b>책임감과 균형 감각</b>이 필요하다는 걸 배웠습니다.
+        </p>
+        <p>
+          누군가가 어려움을 겪고 있을 때 그냥 지나치지 못하는 성격입니다.
+          협력으로 일을 빠르고 완성도 있게 마무리했던 경험은 팀워크의 가치를 깊이 깨닫게 해준 기억으로 남아 있습니다.
+          또한 제가 도왔던 분들이 제가 어려움을 겪을 때 다시 손을 내밀어주셨던 경험을 통해 <b>'협력의 선순환'</b>을 배웠습니다.
         </p>
 
-        <!-- TypeScript -->
-        <div class="problem-item">
-          <h5>🟦 명확한 타입 정의로 유지보수 속도를 개선</h5>
-          <ul>
-            <li>
-              React 프로젝트를 진행하며 컴포넌트 간 데이터 전달이 많아지자,
-              <b>어떤 props가 어디서 넘어오고, 어떤 타입으로 쓰이는지</b>를 추적하는 데 많은 시간을 쏟게 되었습니다.
-              데이터 구조가 조금만 바뀌어도 연쇄적으로 오류가 발생해 유지보수가 점점 어려워졌습니다.
-            </li>
-            <li>
-              이런 반복적인 불편함을 줄이기 위해 TypeScript를 도입했습니다.
-              타입을 명확히 지정하니 IDE에서 <b>자동완성·오류 탐지·함수 추적</b>이 가능해졌고,
-              수정 시 영향 범위를 빠르게 파악할 수 있었습니다.
-            </li>
-            <li>
-              특히 여러 API가 동시에 호출되는 화면에서 <b>데이터 구조가 바뀌면 즉시 에러가 표시</b>되어,
-              런타임 오류보다 훨씬 빠르게 문제를 인식하고 대응할 수 있었습니다.<br />
-              단순한 타입 검증을 넘어서, 코드의 흐름이 <b>눈에 보이는 구조</b>로 바뀌는 경험이었습니다.
-            </li>
-          </ul>
-        </div>
+        <!-- ── 4. 서비스를 함께 만드는 개발자 ── -->
+        <h3>서비스를 함께 만드는 개발자</h3>
+        <p>
+          특정 역할이나 기술에만 머물지 않고, <b>프로젝트 전체의 흐름을 이해하고 관리하는 일</b>에 자연스럽게 참여해왔습니다.
+          일을 진행하면서 팀원들이 집중할 수 있는 환경을 만들고, 필요한 조율이나 결정을 미루지 않으려 노력했던 경험들이 쌓이면서,
+          단순히 '개발'이 아니라 <b>'서비스를 함께 만들어가는 일'</b>에 더 깊은 관심을 갖게 되었습니다.
+        </p>
 
-        <!-- Zustand -->
-        <div class="problem-item">
-          <h5>🟩 Zustand 기반 전역 스토어 리팩터링으로 상태 불일치 개선</h5>
-          <ul>
-            <li>
-              React 프로젝트가 커지면서 여러 컴포넌트가 각자 상태를 관리하게 되었고,
-              한쪽의 변경이 다른 화면에 반영되지 않거나 데이터가 어긋나는 문제가 발생했습니다.
-            </li>
-            <li>
-              프로젝트가 커지면서 여러 컴포넌트가 동일한 데이터를 서로 다른 방식으로 관리하면서,
-              <b>하나의 수정이 다른 화면에 반영되지 않거나 예기치 않은 재렌더링</b>이 자주 일어났습니다.
-            </li>
-            <li>
-              이를 해결하기 위해 Zustand를 도입해 상태를 <b>한 곳에서 일관되게 관리</b>하도록 구조를 변경했습니다.
-              전역 스토어로 감정·집중도·답변 데이터를 통합하고,
-              각 컴포넌트는 필요한 값만 구독하도록 분리하니
-              화면이 안정적으로 동기화되고 <b>렌더 효율</b>도 향상되었습니다.
-            </li>
-            <li>
-              현재는 작은 기능부터 점진적으로 Zustand를 확장하며,
-              <b>단일 소스·명확한 액션·불필요한 렌더 최소화</b> 원칙을 중심으로 구조를 다듬고 있습니다.
-            </li>
-          </ul>
-        </div>
+        <!-- ── 5. 기술 적용 경험 ── -->
+        <h3>기술 적용 경험</h3>
+        <p>
+          프로젝트를 진행하면서 단순히 기능이 동작하는 것보다,
+          <b>"왜 이 문제가 발생했고, 어떻게 구조적으로 개선할 수 있을까"</b>를 중심으로 접근했습니다.
+          아래는 그 과정에서 실제로 느끼고 적용한 경험들입니다.
+        </p>
 
-        <!-- DAO / DTO -->
-        <div class="problem-item">
-          <h5>🟧 DAO/DTO 패턴으로 DB 연동 구조 개선 및 유지보수성 향상</h5>
-          <ul>
-            <li>
-              콘솔 기반 <b>ALBAIT</b> 프로젝트에서는 게시글 등록과 회원 데이터를 DB와 직접 연동했습니다.
-              처음에는 SQL 쿼리를 코드 안에서 바로 호출했지만,<br />
-              기능이 늘어날수록 의존 관계가 복잡해지고 수정 시 오류가 잦았습니다.
-            </li>
-            <li>
-              이를 해결하기 위해 <b>DAO/DTO 패턴</b>을 도입해
-              <b>요청 → DB 처리 → 응답</b> 과정을 단계별로 나눴습니다.<br>
-              이전에는 코드 곳곳에서 SQL을 직접 다뤘지만,
-              지금은 데이터 흐름이 한눈에 보이고 수정할 위치도 명확해졌습니다.<br>
-              <b>데이터가 어디서 만들어지고, 어디로 전달되는지</b> 흐름이 뚜렷해지면서
-              오류를 찾고 수정하는 시간이 크게 줄었습니다.
-            </li>
-          </ul>
+        <h3>TypeScript 도입으로 유지보수 속도 개선</h3>
+        <p>
+          React 프로젝트에서 컴포넌트 간 데이터 전달이 많아지면서,
+          <b>props 추적과 타입 불일치</b>로 인한 오류가 반복되었습니다.
+          데이터 구조가 조금만 바뀌어도 연쇄적으로 오류가 발생해 유지보수가 어려워졌습니다.
+          TypeScript 도입 후 IDE에서 <b>자동완성·오류 탐지·함수 추적</b>이 가능해졌고,
+          여러 API가 동시에 호출되는 화면에서 데이터 구조 변경 시 즉시 에러가 표시되어
+          런타임 오류보다 훨씬 빠르게 문제를 인식하고 대응할 수 있었습니다.
+          코드의 흐름이 <b>눈에 보이는 구조</b>로 바뀌는 경험이었습니다.
+        </p>
 
-          <p class="conclusion">
-            여러 프로젝트를 하면서, <b>데이터와 상태는 서로 영향을 주기 때문에 하나의 흐름 안에서 함께 관리해야 한다</b>는 걸 배웠습니다.<br>
-            저는 단순히 문제를 해결하는 데서 멈추지 않고, <b>구조를 분석하고 개선점을 찾아내 실제 성과로 이어지게 하는 과정</b>에서 보람을 느낍니다.<br>
-            새로운 기술이나 접근법이 등장할 때마다, 이를 기존 시스템에 <b>효율적으로 결합해 속도나 유지보수성을 개선하는 방법</b>을 꾸준히 실험해왔습니다.<br>
-            작업할 때는 ‘이 코드가 전체 구조 속에서 어떤 가치를 만들어내는가’를 항상 고려하며,
-            문제를 부분적으로 보기보다, <b>전체 흐름 속에서 가장 합리적인 해결 방법</b>을 찾으려 합니다.<br>
-            이런 접근을 통해 기능을 안정적으로 개선하고, 복잡한 로직을 단순화해 팀의 효율을 높이기 위해 꾸준히 노력하고 있습니다.<br><br>
-            앞으로는 구조적 사고를 기반으로, <b>성과를 단순히 내는 데 그치지 않고, 그 결과를 분석하고 보완하며 한 단계 더 나은 가치를 만들어가는 개발자</b>로 성장하고자 합니다.<br>
-            <b>다양한 기술과 아이디어를 함께 엮어 더 큰 성과를 만들어가는 사람</b>이 되고 싶습니다.
-          </p>
-        </div>
+        <h3>Zustand 전역 스토어로 상태 불일치 개선</h3>
+        <p>
+          프로젝트 규모가 커지면서 여러 컴포넌트가 동일한 데이터를 서로 다른 방식으로 관리하게 되어,
+          <b>한쪽 변경이 다른 화면에 반영되지 않거나 예기치 않은 재렌더링</b>이 자주 발생했습니다.
+          Zustand를 도입해 상태를 <b>한 곳에서 일관되게 관리</b>하도록 구조를 변경했습니다.
+          각 컴포넌트는 필요한 값만 구독하도록 분리하여 화면이 안정적으로 동기화되고 렌더 효율도 향상되었습니다.
+          이후 <b>단일 소스 · 명확한 액션 · 불필요한 렌더 최소화</b> 원칙으로 구조를 확장하고 있습니다.
+        </p>
 
-        <!-- ✅ 나를 보여주는 마지막 문단 추가 -->
+        <h3>DAO/DTO 패턴으로 DB 연동 구조 개선</h3>
+        <p>
+          콘솔 기반 ALBAIT 프로젝트에서 SQL 쿼리를 코드 안에서 직접 호출했을 때,
+          기능이 늘어날수록 <b>의존 관계가 복잡해지고 수정 시 오류가 잦았습니다.</b>
+          DAO/DTO 패턴 도입으로 <b>요청 → DB 처리 → 응답</b> 과정을 단계별로 분리했습니다.
+          <b>데이터가 어디서 만들어지고 어디로 전달되는지</b> 흐름이 뚜렷해지면서
+          오류를 찾고 수정하는 시간이 크게 줄었습니다.
+        </p>
+        <p>
+          여러 프로젝트를 하면서, <b>데이터와 상태는 서로 영향을 주기 때문에 하나의 흐름 안에서 함께 관리해야 한다</b>는 걸 배웠습니다.
+          저는 단순히 문제를 해결하는 데서 멈추지 않고,
+          <b>구조를 분석하고 개선점을 찾아내 실제 성과로 이어지게 하는 과정</b>에서 보람을 느낍니다.
+        </p>
+
+        <!-- ── 6. 앞으로의 다짐 ── -->
+        <h3>앞으로의 다짐</h3>
+        <p>
+          앞으로도 계속해서 배워야 할 것이 많다고 생각합니다.
+          실력을 키우는 것도 중요하지만, <b>어떤 상황에서도 주어진 역할에 책임을 다하고, 다른 사람과 함께 일할 수 있는 사람</b>으로 성장해가고 싶습니다.
+          저는 결과뿐 아니라 그 과정을 중요하게 여기며, <b>묵묵히 완성도를 높여가는 개발자</b>로 자리잡고 싶습니다.
+        </p>
+        <p>
+          2026년 고려사이버대학교 AI 데이터과학부에 편입하여 AI·데이터 분야의 이론적 기반도 함께 다져가고 있습니다.
+          개발 실무와 AI 학문적 역량을 연결해, <b>더 넓은 관점에서 문제를 해결하는 개발자</b>가 되는 것이 목표입니다.
+        </p>
 
       </div>
     </section>
