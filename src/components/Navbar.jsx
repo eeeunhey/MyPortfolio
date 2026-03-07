@@ -1,123 +1,118 @@
 import { useEffect, useState } from "react";
-
-
-// cn: Tailwind 클래스 합치기 유틸 함수
-// - 여러 클래스를 한 줄로 합쳐줌
-// - true/false 조건에 따라 클래스 넣거나 뺄 수 있음
-// - 같은 속성이 중복되면 마지막 것만 적용됨
-//   예: "p-2 p-4" → 실제로는 "p-4"만 적용됨
-//   보통 clsx + tailwind-merge 조합으로 구현함
-import { cn } from "@/lib/utils"; // cn 유틸 꼭 추가
+import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
-
-// 내비게이션 메뉴 목록 정의
-// name: 화면에 보이는 글자
-// href: 클릭 시 이동할 페이지 내부 위치(id)
 const navItems = [
-  { name: "Home", href: "#hero" }, // 홈 섹션으로 이동
-  { name: "About", href: "#about" }, // 소개에 관련한 페이지로 이동
-  { name: "Skills", href: "#skills" }, // 스킬관련 페이지
-  { name: "Projects", href: "#projects" }, // 프로젝트 섹션으로 이동
-  { name: "Contact", href: "#contact" }, // 연락처 이동
+  { name: "Home", href: "/#hero", anchor: true },
+  { name: "About", href: "/#about", anchor: true },
+  { name: "Skills", href: "/#skills", anchor: true },
+  { name: "Projects", href: "/#projects", anchor: true },
+  { name: "Contact", href: "/#contact", anchor: true },
+  { name: "Resume", href: "/resume", anchor: false },
 ];
 
 export const Navbar = () => {
-  // 스크롤 여부 상태 (스크롤했는지 아닌지 true/false)
   const [isScrolled, setIsScrolled] = useState(false);
-  // 모바일 메뉴 열림/닫힘 상태
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    // 스크롤할 때 실행되는 함수
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // 화면이 조금이라도 내려가면(true), 맨 위면(false)
+      setIsScrolled(window.scrollY > 10);
     };
-
-    // 스크롤 이벤트 등록
     window.addEventListener("scroll", handleScroll);
-     // 컴포넌트가 사라질 때 이벤트 제거
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    // nav 태그: 상단 고정된 네비게이션 바
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300", // 기본 화면 클래스 (이벤트 없을 때 그냥 기본 값)
+        "fixed w-full z-40 transition-all duration-500",
         isScrolled
-          ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" // 스크롤했을 때 스타일
-          : "py-5"  // 기본 스타일
+          ? "py-3 glass shadow-sm"
+          : "py-5 bg-transparent"
       )}
     >
-        {/* nav 안의 컨테이너: 좌우 배치 */}
       <div className="container flex items-center justify-between">
-        {/* 왼쪽 로고 (Home 섹션으로 이동) */}
+        {/* 로고 */}
         <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"    // 클릭 시 hero 섹션으로 스크롤 이동
+          className="text-xl font-bold text-primary flex items-center gap-1"
+          href="#hero"
         >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">EUNHEY</span>{" "}
-            Portfolio
-          </span>
-
+          <span className="text-glow text-foreground tracking-tight">EUNHEY</span>
+          <span className="font-light text-primary">Portfolio</span>
         </a>
 
-         {/* 데스크톱 화면에서 보이는 메뉴 */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key} href={item.href} // 각 버튼 클릭 시 해당 위치로 스크롤
-              className="text-foreground/80 hover:text-primary transotion-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+        {/* 데스크톱 메뉴 */}
+        <div className="hidden md:flex items-center gap-1">
+          {navItems.map((item, key) =>
+            item.anchor ? (
+              <a
+                key={key}
+                href={item.href}
+                className="px-4 py-2 text-sm text-foreground/70 hover:text-primary
+                           transition-colors duration-300 rounded-full
+                           hover:bg-primary/5"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={key}
+                to={item.href}
+                className="px-4 py-2 text-sm text-foreground/70 hover:text-primary
+                           transition-colors duration-300 rounded-full
+                           hover:bg-primary/5"
+              >
+                {item.name}
+              </Link>
+            )
+          )}
         </div>
 
-        {/* 모바일 화면에서 보이는 메뉴 */}
-        {/*  버튼 클릭 시 메뉴 열림/닫힘 상태를 토글한다.
-              prev는 이전 상태값(isMenuOpen)이다 
-              !prev로 true/false를 반전한다. */}
-        {/*  Tailwind 클래스:
-             md:hidden      → 화면이 md(중간) 이상일 때는 이 버튼을 숨김(모바일 전용 버튼)
-             p-2            → 패딩 0.5rem
-             text-forground → 글자색
-             z-50           → 다른 요소 위에 떠 있도록 z-index를 크게 설정 */}
-        <button 
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="md:hidden p-2 text-foreground z-50"
-        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+        {/* 모바일 메뉴 버튼 */}
+        <button
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="md:hidden p-2 text-foreground z-50"
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
-        {/* isMenuOpen이 true면 'X' 아이콘(닫기), false면 'Menu' 아이콘(열기)을 보여준다.*/}
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-      <div className = {cn(
-        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-        "transition-all duration-300 md:hidden",  // 애니메이션, 데스크톱에서는 숨김
-        isMenuOpen ? "opacity-100 pointer-events-auto" // 열려있으면 보이기
-                    : "opacity-0 pointer-events-none"  // 닫혀있으면 안 보이기
-      )}>
-
-         {/* 메뉴 항목들을 세로로 나열 */}
-        <div className="flex flex-col space-y-6 text-xl text-center"> 
-          {navItems.map((item, key) => (
-            <a
-              key={key} href={item.href} 
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </div>
-        {/* mobile nav - 나중에 햄버거 메뉴 추가 */}
-        <div className="md:hidden">
-          {/* TODO: mobile menu */}
+        {/* 모바일 전체화면 메뉴 */}
+        <div
+          className={cn(
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40",
+            "flex flex-col items-center justify-center",
+            "transition-all duration-300 md:hidden",
+            isMenuOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          )}
+        >
+          <div className="flex flex-col space-y-8 text-xl text-center">
+            {navItems.map((item, key) =>
+              item.anchor ? (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={key}
+                  to={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+          </div>
         </div>
       </div>
     </nav>

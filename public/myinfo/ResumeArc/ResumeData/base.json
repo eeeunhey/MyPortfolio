@@ -1,0 +1,153 @@
+{
+  "page_title": "김은혜 · 이력서",
+  "headline": "문제에서 배움을 찾고 성장하는",
+  "profile": {
+    "name": "김은혜 입니다",
+    "role": "JUNIOR DEVELOPER (WEB · BACKEND · AI)",
+    "photo": "images/eunhyeprofile.jpg",
+    "photo_alt": "김은혜 프로필 사진",
+    "summary_html": "저는 새로운 시도와 도전을 통해 문제를 발견하고 해결하며 성장해왔습니다.<br />작은 단위로 나누어 해결하고 개선을 반복한 경험은 저를 더 나은 방향으로 이끌었고,<br />앞으로도 이런 태도를 바탕으로 계속 발전해 나가겠습니다."
+  },
+
+  "contact": {
+    "tel_label": "+82-10-2627-1356",
+    "tel_href": "tel:+821026271356",
+    "email": "dmsgp2627@naver.com",
+    "email_href": "mailto:dmsgp2627@naver.com",
+    "github": "https://github.com/eeeunhey",
+    "github_label": "github.com/eeeunhey"
+  },
+
+  "education": [
+    { "title": "성남 폴리텍 하이테크 과정", "period": "2024.01 – 2024.12", "desc": "Java (Spring/Boot/MyBatis/JPA) · Python (LLM / Object Detection)" },
+    { "title": "KDT 국비 과정 수료", "period": "2023.03 – 2023.09", "desc": "C/Java/Python 기초, 실습" },
+    { "title": "방송통신대(식품영양학)", "period": "2016.02 – 2021.02", "desc": "" }
+  ],
+
+  "skills": [
+    "Java","Python","SQL","Spring","Spring Boot","MyBatis","JPA",
+    "React","Vite","TailwindCSS","LLM","Object Detection","Git","Docker","C# WinForms"
+  ],
+
+  "certs": [
+    "컴퓨터활용능력 1급, 2급",
+    "ITQ A등급 (한글, 엑셀, 파워포인트)",
+    "GTQ 1급, 2급",
+    "자동차운전면허 1종 보통"
+  ],
+
+  "experience": [
+    {
+      "company": "솔루션팀",
+      "team": "머신 비전 파트",
+      "period": "2024.02 – 2024.11",
+      "bullets": [
+        "비전 셋팅 및 카메라 파라미터 조정 지원",
+        "C# WinForms UI 일부 수정 및 테스트",
+        "테스트 결과 정리 및 개선 사항 보고"
+      ]
+    },
+    {
+      "company": "쿠팡 물류",
+      "team": "전산 / 관리",
+      "period": "2019.03 – 2021.11",
+      "bullets": [
+        "단기 인력 배치와 스케줄 조율",
+        "출고 전산 흐름 점검 및 마감 관리",
+        "마감 시점의 소통·조율 업무"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Velin — AI Interview Prep",
+      "period": "2025.08–2025.09 (개인)",
+      "brief": "면접 질문·근거·체크리스트 자동 생성, 세션별 분석을 제공하는 웹 서비스",
+      "meta": "Frontend, Backend",
+      "thumb": "images/velin-logo.png",
+      "detail_anchor": "#velin-detail"
+    },
+    {
+      "title": "ALBAIT — 콘솔 구인·구직 실습",
+      "period": "2025.04–2025.05 (개인)",
+      "brief": "콘솔에서 회원/공고/지원 CRUD와 관리자 통계를 구현한 Java·Oracle 실습",
+      "meta": "Backend, Database",
+      "thumb": "images/Alba-logo.png",
+      "detail_anchor": "#albait-detail"
+    }
+  ],
+
+  "project_details": [
+    {
+      "title": "Velin — AI Interview Prep",
+      "subtitle": "Vite·React·Tailwind / Node·Express / Recharts / TanStack Query / FFmpeg(WASM)",
+      "hero": "images/velin-mainpage.png",
+      "overview": "면접 질문·근거·체크리스트 자동 생성과 멀티모달(영상/텍스트) 분석 기반 세션·질문 단위 리포트를 제공합니다.",
+      "period_people": "2025.08–2025.09 (6주) · 개인",
+      "intent": [
+        "이론 학습만으로는 협업·운영 관점에서 부족함을 느꼈습니다",
+        "“함께 일하고 싶은 동료라면 어떤 질문과 근거가 필요할까?” 문제의식에서 출발",
+        "질문·참고 자료·체크리스트를 한눈에 제공하는 실무형 도구 기획"
+      ],
+      "features": [
+        "LLM 기반 질문/근거 이론/코드 예시 제공",
+        "IT 직군별 실무 질문 생성 후 제공",
+        "직군별 생성 질문 후 질문 추가 생성"
+      ],
+      "stack": ["React","Vite","Tailwind","Node·Express","MongoDB","Recharts","TanStack Query","FFmpeg(WASM)"],
+      "learnings": [
+        "프롬프트 템플릿 설계로 AI 출력 제어·일관성 유지",
+        "React–Express–MongoDB 연동 구조 이해",
+        "JWT 인증·파일 업로드로 보안/데이터 흐름 경험"
+      ],
+      "links": [
+        { "label": "GitHub: eeeunhey/AI_InterviewPrep", "href": "https://github.com/eeeunhey/AI_InterviewPrep" }
+      ]
+    },
+    {
+      "title": "ALBAIT — 콘솔 구인·구직 사이트 구현",
+      "subtitle": "Java · Oracle · JDBC · DAO/VO",
+      "hero": "images/ALBA-mainpage.png",
+      "overview": "개인/기업 회원관리, 공고/지원/상태변경, 관리자 통계를 제공하는 콘솔 기반 프로젝트.",
+      "period_people": "2025.04–2025.05 (개인)",
+      "intent": [
+        "단순 CRUD 예제로는 실제 구인·구직 서비스 구조를 충분히 이해하기 어려움",
+        "회원·공고·지원 흐름을 직접 설계해 콘솔 환경에서 구현",
+        "DB 설계, DAO/VO, 트랜잭션 등 실무 패턴 학습"
+      ],
+      "features": [
+        "개인/기업 회원, 공고 등록/지원, 지원 상태 변경",
+        "관리자 통계(사용자/지원 현황) 조회"
+      ],
+      "stack": ["Java","Oracle","JDBC","DAO/VO"],
+      "learnings": [
+        "인덱스/실행계획 분석으로 SQL 성능 최적화 원리 학습",
+        "DAO/Service 분리로 계층형 아키텍처 이해",
+        "예외 처리/트랜잭션으로 안정적인 데이터 흐름"
+      ],
+      "links": [
+        { "label": "GitHub: eeeunhey/AlbaItProject", "href": "https://github.com/eeeunhey/AlbaItProject" }
+      ]
+    }
+  ],
+
+  "about_blocks": [
+    {
+      "title": "개인 프로젝트 경험",
+      "body": "폴리텍 하이테크 과정에서 AI Interview Coach(React·Vite·Tailwind / Node·Express)와 ALBAIT(Java·Oracle)를 구현. 프론트(컴포넌트·상태·차트)와 백엔드(REST·업로드·간단 인증)를 실습했고, Velin으로 전체 연동 흐름을 선행 학습."
+    },
+    {
+      "title": "문제 해결 능력",
+      "body": "useEffect 무한 실행을 의존성 정제 및 useMemo/useCallback으로 해결. Java에선 DAO/DTO 패턴으로 요청→DB→응답 흐름 구성."
+    },
+    {
+      "title": "협업 및 커뮤니케이션",
+      "body": "브랜치 전략(기능 단위), 커밋·PR·Issue 템플릿으로 변경 이력 명확화. 재현 절차·전/후 비교·스크린샷으로 리뷰 효율화."
+    },
+    {
+      "title": "개발자로서의 방향",
+      "body": "기능을 작게 나누어 끝까지 완성, 안정적으로 동작하는 서비스 우선. 문서화/공유로 팀의 속도와 품질을 함께 향상."
+    }
+  ]
+}

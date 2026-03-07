@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils"; // cn 유틸 꼭 추가
+import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
@@ -27,10 +27,17 @@ const skills = [
 
 const categories = ["all", "frontend", "backend", "tools"];
 
+const categoryLabels = {
+  all: "All",
+  frontend: "Frontend",
+  backend: "Backend",
+  tools: "Tools",
+};
+
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const filterSkills = skills.filter(
+  const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
 
@@ -41,30 +48,36 @@ export const SkillsSection = () => {
           My <span className="text-primary">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* 카테고리 필터 */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category, key) => (
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full text-sm font-medium transition-all duration-300",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreforund hover:bd-secondary"
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-card text-foreground/60 hover:bg-secondary hover:text-foreground"
               )}
             >
-              {category}
+              {categoryLabels[category]}
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filterSkills.map((skill, key) => (
+
+        {/* 스킬 그리드 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover flex items-center gap-3"
+              className="bg-card p-5 rounded-xl border border-border
+                         flex items-center gap-4
+                         transition-all duration-300
+                         hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-md"
             >
               <span className="text-2xl">{skill.icon}</span>
-              <h3 className="font-semibold text-lg">{skill.name}</h3>
+              <h3 className="font-semibold text-sm">{skill.name}</h3>
             </div>
           ))}
         </div>
