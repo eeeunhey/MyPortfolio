@@ -42,14 +42,14 @@ export const AboutSection = () => {
               개발자로 나아가고 싶습니다.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start pt-2">
-              <a href="#contact" className="cosmic-button">
+            <div className="flex flex-row gap-3 justify-center items-center pt-2">
+              <a href="#contact" className="cosmic-button flex-1 text-center">
                 연락하기
               </a>
               <a
-                href="/myinfo/이력서_포트폴리오.pdf"
+                href="/myinfo/김은혜_이력서.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
+                className="flex-1 inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full
                            border border-primary/40 text-primary text-sm font-semibold
                            hover:bg-primary/10 transition-all duration-300 hover:-translate-y-0.5"
               >

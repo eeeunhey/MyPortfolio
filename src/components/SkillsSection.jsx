@@ -42,14 +42,14 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <section id="skills" className="py-16 sm:py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
         </h2>
 
         {/* 카테고리 필터 */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
           {categories.map((category, key) => (
             <button
               key={key}
@@ -67,17 +67,17 @@ export const SkillsSection = () => {
         </div>
 
         {/* 스킬 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-5 rounded-xl border border-border
-                         flex items-center gap-4
+              className="bg-card p-3 sm:p-5 rounded-xl border border-border
+                         flex items-center gap-2 sm:gap-4
                          transition-all duration-300
                          hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-md"
             >
-              <span className="text-2xl">{skill.icon}</span>
-              <h3 className="font-semibold text-sm">{skill.name}</h3>
+              <span className="text-lg sm:text-2xl">{skill.icon}</span>
+              <h3 className="font-semibold text-xs sm:text-sm">{skill.name}</h3>
             </div>
           ))}
         </div>

@@ -37,7 +37,7 @@ export const Navbar = () => {
         {/* 로고 */}
         <a
           className="text-xl font-bold text-primary flex items-center gap-1"
-          href="#hero"
+          href="/"
         >
           <span className="text-glow text-foreground tracking-tight">EUNHEY</span>
           <span className="font-light text-primary">Portfolio</span>
