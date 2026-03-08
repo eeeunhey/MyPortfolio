@@ -35,26 +35,22 @@ export const ContactSection = () => {
                     아래 채널로 편하게 연락해 주세요.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center max-w-2xl mx-auto">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto">
                     {contactLinks.map((item, idx) => (
                         <a
                             key={idx}
                             href={item.href}
                             target={item.href.startsWith("http") ? "_blank" : undefined}
                             rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                            className="group bg-card rounded-xl border border-border p-6
-                         flex flex-col items-center gap-3 text-center
+                            className="group bg-card rounded-xl border border-border p-3 sm:p-6
+                         flex flex-col items-center gap-2 sm:gap-3 text-center
                          transition-all duration-300
                          hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg"
                         >
-                            <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                                <item.icon className="h-6 w-6 text-primary" />
+                            <div className="p-2 sm:p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                                <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                             </div>
-                            <h3 className="font-semibold text-sm">{item.label}</h3>
-                            <p className="text-muted-foreground text-xs flex items-center gap-1">
-                                {item.value}
-                                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            </p>
+                            <h3 className="font-semibold text-xs sm:text-sm">{item.label}</h3>
                         </a>
                     ))}
                 </div>

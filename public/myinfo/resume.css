@@ -101,6 +101,8 @@ html {
 
 /* sidebar */
 aside {
+  display: flex;
+  flex-direction: column;
   padding: var(--space-8) var(--space-8) calc(var(--space-8) + 4px);
   background: var(--tint);
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
@@ -167,6 +169,104 @@ main {
   color: var(--muted);
   letter-spacing: .35px;
   margin-top: 8px;
+}
+
+/* header with QR */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-qr {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.header-qr img {
+  width: 64px;
+  height: 64px;
+}
+
+.header-qr p {
+  font-size: 8px;
+  color: #6b7280;
+  margin: 3px 0 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+
+  /* 2컬럼 → 1컬럼 */
+  .resume {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* 사이드바 너비 풀로 */
+  aside {
+    width: 100%;
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  /* 사이드 사진 중앙 정렬 + 축소 */
+  .aside-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+    display: block;
+  }
+
+  /* 헤더: 이름+QR 좌우 배치 (겹침 없이) */
+  .header-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .header-flex>div:first-child {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* 이름 폰트 축소 */
+  .name {
+    font-size: 18px !important;
+    line-height: 1.3;
+  }
+
+  .role {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  /* QR 우측 정렬, 겹침 없음 */
+  .header-qr {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .header-qr img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .header-qr p {
+    font-size: 7px;
+  }
+
+  /* 헤더 여백 */
+  .header {
+    padding: 8px 0;
+    margin-bottom: 12px;
+  }
 }
 
 .section {
@@ -598,136 +698,161 @@ b {
 }
 
 /* =========================
-   Print (single, unified)
+   Print — unified
 ========================= */
 @media print {
 
-  /* keep colors */
+  /* 색상 유지 */
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* page */
+  /* 머리말·바닥글 제거 + A4 중앙 배치 */
   @page {
     size: A4;
-    margin: 8mm;
+    margin: 3mm;
   }
 
   html,
   body {
-    width: auto;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .container {
-    width: auto;
-    max-width: none;
-    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8mm 10mm;
+    box-sizing: border-box;
   }
 
-  /* base sizing */
   :root {
-    font-size: var(--print-font);
+    font-size: 12px;
   }
 
-  /* 2-col compact */
+  /* screen-only 구분선 숨김 */
+  .page-break {
+    display: none;
+  }
+
+  /* ── 이력서 첫 페이지: 초컴팩트 ── */
   .resume {
-    grid-template-columns: var(--print-side) 1fr;
-    gap: var(--print-gap);
+    grid-template-columns: 200px 1fr;
+    gap: 12px;
   }
 
-  /* sidebar compact */
   aside {
-    padding: 14px;
-    border-radius: 10px;
-  }
-
-  .aside-photo {
+    padding: 10px;
     border-radius: 8px;
   }
 
+  .aside-photo {
+    border-radius: 6px;
+  }
+
   .aside-block {
-    margin-top: 16px;
+    margin-top: 10px;
+  }
+
+  .aside-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
   }
 
   .aside-list li {
-    margin: 6px 0;
-    font-size: calc(var(--print-font) * 1);
+    margin: 4px 0;
+    font-size: 11px;
   }
 
-  /* header compact */
   .header {
     padding: 4px 0 10px;
     margin-bottom: 10px;
   }
 
   .name {
-    font-size: 28px;
+    font-size: 22px;
     background: none;
   }
 
   .role {
-    font-size: 11px;
-    margin-top: 4px;
+    font-size: 10px;
+    margin-top: 2px;
   }
 
   .section {
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .section-title {
-    font-size: 12px;
-    padding: 6px 8px;
+    font-size: 11px;
+    padding: 4px 6px;
     border-left: 3px solid var(--accent);
     background: none;
-    border-radius: 6px;
+    border-radius: 4px;
+    margin-bottom: 8px;
   }
 
   .item {
-    padding: 8px 0;
+    padding: 6px 0;
   }
 
   .item h4 {
-    font-size: 14px;
-    margin-bottom: 2px;
+    font-size: 12px;
+    margin-bottom: 1px;
   }
 
   .item .meta {
-    font-size: 12px;
+    font-size: 10px;
   }
 
-  /* project cards compact */
+  .item ul {
+    margin: 2px 0 0 16px;
+  }
+
+  .item li {
+    margin: 1px 0;
+    font-size: 10.5px;
+  }
+
+  /* 프로젝트 카드 초컴팩트 */
   .proj-grid {
-    gap: 12px;
+    gap: 6px;
   }
 
   .proj-card {
-    min-height: 120px;
-    padding: 12px;
-    border-radius: 10px;
+    min-height: auto;
+    padding: 8px 10px;
+    border-radius: 6px;
     box-shadow: none;
   }
 
   .proj-thumb {
-    flex: 0 0 72px;
-    height: 72px;
-    margin-right: 14px;
+    flex: 0 0 36px;
+    height: 36px;
+    margin-right: 8px;
   }
 
   .proj-thumb img {
-    max-width: 64px;
-    max-height: 64px;
+    max-width: 32px;
+    max-height: 32px;
   }
 
   .proj-title {
-    font-size: 13.5px;
-    margin-bottom: 2px;
+    font-size: 11px;
+    margin-bottom: 0;
   }
 
   .proj-date {
-    font-size: 11px;
-    margin-bottom: 4px;
+    font-size: 9px;
+    margin-bottom: 0;
   }
 
   .proj-desc,
@@ -736,19 +861,21 @@ b {
     display: none !important;
   }
 
-  /* detail page starts new sheet */
+  /* ── 모든 .page 섹션: 새 페이지에서 시작 + 중앙 배치 ── */
   .page {
     break-before: page;
     page-break-before: always;
     box-shadow: none;
     border: none;
     border-radius: 0;
-    padding: 0;
+    padding: 8mm 10mm;
     width: 100%;
     max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
-  /* avoid break inside components */
+  /* 덩어리 분리 금지 */
   .resume,
   .section,
   .proj-card,
@@ -763,13 +890,10 @@ b {
   .refs,
   .hero,
   .about-block,
-  .problem-item,
   .page>section,
   .page>div,
-  .about,
-  .about p,
-  .about ul,
-  .about li {
+  .about h3,
+  .about p {
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -779,132 +903,70 @@ b {
     widows: 2;
   }
 
-  /* #about-me: force single page fit */
-  #about-me {
-    break-before: page;
-    page-break-before: always;
-    break-after: avoid;
-    page-break-after: avoid;
-    transform: scale(var(--print-scale));
-    transform-origin: top center;
+  /* ── 자기소개서 페이지 인쇄 최적화 ── */
+  .about-page {
+    padding: 8px 0 !important;
   }
 
-  #about-me .about {
-    font-size: calc(var(--print-font) * 0.96);
-    line-height: 1.45;
+  .about-page .about {
+    font-size: 12.5px;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
   }
 
-  #about-me .about p {
-    margin-bottom: 6px;
-  }
-
-  #about-me .about ul {
-    margin: 8px 0 10px 18px;
-  }
-
-  #about-me .about li {
-    margin-bottom: 4px;
-  }
-
-  #about-me .about-block,
-  #about-me .problem-item {
-    padding: 12px 14px;
-    margin-top: 12px;
-    box-shadow: none;
-    background: transparent;
-    border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
-  }
-
-  #about-me .problem-item h5 {
-    font-size: 13px;
-    margin: 4px 0 4px;
-    color: var(--accent-ink);
-  }
-
-  #about-me .proj-h-lg {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-}
-
-/* ===== 인쇄 시 #about-me를 반드시 한 장에 맞추기 (최소 수정) ===== */
-@media print {
-
-  /* 1) 새 장에서 시작 + 다음 장으로 밀리지 않게 */
-  #about-me {
-    break-before: page;
-    /* 새 장 시작 */
-    page-break-before: always;
-    break-after: avoid;
-    /* 바로 다음 장으로 밀림 방지 */
-    page-break-after: avoid;
-
-    /* 시각적 요소 정리(여백/테두리/그림자 제거) */
-    padding: 12px !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-
-    /* 크기 미세 축소(페이지 초과 방지) */
-    transform: scale(0.96);
-    /* 일반 브라우저 */
-    transform-origin: top center;
-    zoom: 0.96;
-    /* ✅ Chrome 인쇄 대응 */
-  }
-
-  /* 2) 덩어리 중간 분리 금지(문단/리스트/카드 등) */
-  #about-me,
-  #about-me .about,
-  #about-me .problem-item,
-  #about-me p,
-  #about-me ul,
-  #about-me li,
-  #about-me h2,
-  #about-me h5 {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* 3) 폰트/여백만 살짝 더 압축 (본문만 영향을 줌) */
-  #about-me .about {
-    font-size: 12.8px;
-    /* 기본 14px → 인쇄 전용 축소 */
-    line-height: 1.44;
-  }
-
-  #about-me h2 {
+  .about-page .about h2 {
     font-size: 18px;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
+    padding-bottom: 6px;
   }
 
-  #about-me .problem-item {
-    margin-top: 8px;
-    padding: 8px 10px;
+  .about-page .about h3 {
+    font-size: 12px;
+    margin: 12px 0 4px;
+    padding: 4px 8px;
+    border-left-width: 3px;
   }
 
-  #about-me .problem-item h5 {
-    font-size: 12.6px;
-    margin: 4px 0;
-  }
-
-  #about-me .about p {
+  .about-page .about p {
     margin-bottom: 6px;
+    font-size: 12.5px;
+    line-height: 1.5;
   }
 
-  #about-me .about ul {
+  .about-page .about ul {
     margin: 6px 0 8px 16px;
   }
 
-  #about-me .about li {
-    margin-bottom: 4px;
+  .about-page .about li {
+    margin-bottom: 3px;
   }
 
-  /* 4) 페이지 여백(넘치면 6mm로 더 줄여도 됨) */
-  @page {
-    size: A4;
-    margin: 8mm;
+  /* ── 프로젝트 상세 페이지 인쇄 최적화 ── */
+  .proj-h-lg {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .proj-sub {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .hero {
+    max-width: 500px;
+    margin: 8px auto 16px;
+    border-radius: 8px;
+  }
+
+  .kv-rows {
+    gap: 10px;
+    margin: 10px 0 16px;
+    font-size: 13px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 8px;
   }
 }

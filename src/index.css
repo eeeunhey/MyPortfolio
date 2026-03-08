@@ -151,7 +151,7 @@ body {
 }
 
 @utility cosmic-button {
-  @apply inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm transition-all duration-300 ease-out active:scale-95;
+  @apply inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm transition-all duration-300 ease-out active:scale-95;
 
   &:hover {
     box-shadow: 0 4px 20px rgba(200, 150, 14, 0.35);

@@ -7,8 +7,8 @@ import { Navbar } from "../components/Navbar";
 const resumes = [
     {
         label: "포트폴리오",
-        file: "/myinfo/이력서_포트폴리오.pdf",
-        download: "이력서_포트폴리오.pdf",
+        file: "/myinfo/김은혜 포트폴리오.pdf",
+        download: "김은혜 포트폴리오.pdf",
     },
     {
         label: "이력서",
@@ -54,8 +54,8 @@ export const ResumePage = () => {
                                     key={i}
                                     onClick={() => setActive(i)}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${active === i
-                                            ? "bg-primary text-primary-foreground shadow-md"
-                                            : "bg-card text-foreground/60 border border-border hover:text-foreground hover:border-primary/30"
+                                        ? "bg-primary text-primary-foreground shadow-md"
+                                        : "bg-card text-foreground/60 border border-border hover:text-foreground hover:border-primary/30"
                                         }`}
                                 >
                                     {r.label}
