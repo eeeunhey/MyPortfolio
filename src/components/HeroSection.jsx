@@ -24,11 +24,9 @@ export const HeroSection = () => {
 
             {/* 이름 + 가치 문구 */}
             <div className="opacity-0 animate-fade-in-delay-1 space-y-1.5">
-              {/* 이름 */}
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
                 김은혜
               </h1>
-              {/* 가치 문구 — 이름 바로 아래, 짧고 강하게 */}
               <p className="text-base md:text-lg text-primary font-medium">
                 아이디어를 코드로, 코드를 가치로
               </p>
@@ -96,7 +94,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* ── 오른쪽: 세로형 인물 사진 (뱃지 없음) ── */}
+          {/* ── 오른쪽: 세로형 인물 사진 ── */}
           <div className="flex justify-center md:justify-end
                           opacity-0 animate-fade-in-delay-1">
             <div className="relative">

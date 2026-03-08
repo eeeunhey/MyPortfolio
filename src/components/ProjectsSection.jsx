@@ -131,7 +131,8 @@ export const projects = [
       "면접 질문·근거·체크리스트 자동 생성, 세션별 분석을 제공하는 웹 서비스.",
     image: "/images/velin-mainpage.png",
     tags: ["Frontend", "Backend", "TypeScript", "React"],
-    demoUrl: "https://ai-interview-prep-3rshahg4n-eunhyes-projects-b3620ae0.vercel.app/",
+    demoUrl:
+      "https://ai-interview-prep-3rshahg4n-eunhyes-projects-b3620ae0.vercel.app/",
     githubUrl: "https://github.com/eeeunhey/AI_InterviewPrep",
     overview:
       "현업 관점의 면접 질문과 근거, 체크리스트를 자동 생성하고 세션별 분석을 제공하는 인터뷰 준비 웹 서비스입니다.",
@@ -171,7 +172,7 @@ export const projects = [
   },
 ];
 
-// 탭 목록: 모든 stackCategories에서 유니크하게 추출
+// 탭 목록
 const ALL_TABS = ["All", "AI", "Python", "React", "TypeScript", "JavaScript", "Node.js", "Java"];
 
 export const ProjectsSection = () => {
