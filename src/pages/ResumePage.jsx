@@ -1,8 +1,9 @@
-import { Download, Maximize2, FileText, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Download, Maximize2, FileText, ChevronDown, Mail } from "lucide-react";
+import { useState, useEffect } from "react";
 import { StarBackground } from "../components/StarBackground";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { Navbar } from "../components/Navbar";
+import { ContactSection } from "../components/ContactSection"; // ⬅️ 새로 임포트
 
 const resumes = [
     {
@@ -20,7 +21,55 @@ const resumes = [
 export const ResumePage = () => {
     const [active, setActive] = useState(0);
     const [fullscreen, setFullscreen] = useState(false);
+    const [isVerified, setIsVerified] = useState(false); // ⬅️ 검증 상태
 
+    useEffect(() => {
+        // 이미 연락을 남긴 기록이 있다면 바로 보여줌
+        if (localStorage.getItem("hasContacted") === "true") {
+            setIsVerified(true);
+        }
+    }, []);
+
+    // 아직 연락하지 않은 경우 보여줄 가림막 화면
+    if (!isVerified) {
+        return (
+            <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+                <ThemeToggle />
+                <StarBackground />
+                <Navbar />
+
+                <main className="pt-32 pb-16 px-4">
+                    <div className="container mx-auto max-w-5xl">
+                        <div className="text-center mb-8">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+                                bg-primary/10 text-primary text-sm font-medium
+                                border border-primary/20 mb-4">
+                                <Mail className="w-4 h-4" />
+                                이력서 열람 안내
+                            </div>
+                            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                                먼저 연락을 남겨주시면, <br className="md:hidden"/> <span className="text-primary">상세 이력서를 보여드릴게요!</span>
+                            </h1>
+                            <p className="text-muted-foreground text-sm max-w-lg mx-auto leading-relaxed">
+                                개인정보가 포함되어 있어 부득이하게 전체 공개를 가려두었습니다.<br />
+                                아래 폼으로 짧은 인사와 이메일을 남겨주시면 즉시 전체 문서를 확인하실 수 있습니다. 😊
+                            </p>
+                        </div>
+
+                        {/* 이력서 페이지 안에 들어가는 미니 Contact 폼 */}
+                        <div className="pb-16 max-w-5xl mx-auto">
+                            <ContactSection 
+                                onSuccess={() => setIsVerified(true)} 
+                                hideTitle={true} 
+                            />
+                        </div>
+                    </div>
+                </main>
+            </div>
+        );
+    }
+
+    // 연락을 마친 경우 정상적으로 이력서 뷰어 렌더링
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
             <ThemeToggle />
@@ -41,7 +90,7 @@ export const ResumePage = () => {
                             이력서<span className="text-primary"> 보기 / 다운로드</span>
                         </h1>
                         <p className="text-muted-foreground text-sm">
-                            포트폴리오 또는 이력서를 바로 열람하거나 다운로드할 수 있습니다.
+                            성공적으로 인증되었습니다. 문서를 바로 열람하거나 다운로드할 수 있습니다.
                         </p>
                     </div>
 
